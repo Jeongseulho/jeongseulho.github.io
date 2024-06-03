@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://seulog.github.io/sitemap-index.xml
-Host: https://seulog.github.io
+Sitemap: https://jeongseulho.github.io/sitemap-index.xml
+Host: https://jeongseulho.github.io
