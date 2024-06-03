@@ -14,8 +14,16 @@ module.exports = {
     description: `슬호의 블로그`,
     author: { name: `seulho` },
     icon: `/static/profile-image.png`,
-    siteUrl: `https://seulog.github.io/`,
-    keywords: [`blog`, `gatsby`, `seulog`, `frontend`, `developer`, `react`],
+    siteUrl: `https://jeongseulho.github.io/`,
+    keywords: [
+      `blog`,
+      `gatsby`,
+      `seulog`,
+      `jeongseulho`,
+      `frontend`,
+      `developer`,
+      `react`,
+    ],
   },
   flags: {
     DEV_SSR: true,
@@ -77,8 +85,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://seulog.github.io/',
-        sitemap: 'https://seulog.github.io/sitemap-index.xml',
+        host: 'https://jeongseulho.github.io/',
+        sitemap: 'https://jeongseulho.github.io/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
@@ -91,7 +99,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://seulog.github.io/',
+        siteUrl: 'https://jeongseulho.github.io/',
         stripQueryString: true,
       },
     },

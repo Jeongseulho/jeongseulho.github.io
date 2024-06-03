@@ -11,7 +11,7 @@ const UtteranceBox = styled.div`
 `;
 
 const src = 'https://utteranc.es/client.js';
-const repo = 'JeongSeulho/seulog.github.io';
+const repo = 'JeongSeulho/jeongseulho.github.io';
 
 type UtterancesAttributesType = {
   src: string;

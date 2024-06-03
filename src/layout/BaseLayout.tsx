@@ -45,7 +45,7 @@ const INITIAL_META = {
   title: 'seulog',
   description: '슬호의 블로그',
   image: '/static/profile-image.png',
-  url: 'https://seulog.github.io/',
+  url: 'https://jeongseulho.github.io/',
 };
 
 const BaseLayout = ({ path, children, meta }: BaseLayoutProps) => {
