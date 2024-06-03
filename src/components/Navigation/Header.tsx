@@ -1,0 +1,172 @@
+import React, { useEffect, useState } from 'react';
+import styled from '@emotion/styled';
+import { Link, navigate } from 'gatsby';
+import { breakpoints, mediaQuery } from 'theme/index';
+import { PATH } from 'routes/path';
+import NavMenu from './NavMenu';
+import Drawer from './Drawer';
+import IconButton from '../Controls/IconButton';
+import Tooltip from '../Controls/Tooltip';
+import { useResponsive } from 'hooks/useResponsive';
+import logo from 'assets/images/logo.png';
+
+const HeaderLayout = styled.header`
+  position: fixed;
+  z-index: 99999;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 72px;
+  background-color: ${({ theme }) => theme.lightTheme.backgroundColor};
+  box-shadow: 0px 2px 4px 2px rgba(225, 225, 225, 0.7);
+  /* border-bottom: 2px solid #fafafa; */
+
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 32px;
+  transition: all 0.5s ease;
+
+  ${mediaQuery.sm} {
+    height: 64px;
+    padding: 0px 8px;
+  }
+`;
+
+const NavWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+`;
+
+const NavMenuBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  ${mediaQuery.sm} {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: -10000;
+    right: 84px;
+  }
+`;
+
+const MobileMenuBox = styled.div`
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -10000;
+
+  ${mediaQuery.sm} {
+    position: relative;
+    visibility: visible;
+    opacity: 100;
+  }
+`;
+
+const IconWrapper = styled.div`
+  margin-left: 8px;
+  ${mediaQuery.sm} {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: -10000;
+  }
+`;
+
+const Logo = styled.div`
+  width: 80px;
+  height: 80px;
+  background: url(${logo});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+  display: flex;
+  align-items: center;
+`;
+
+const DesktopMenu = ({ path }: { path: string }) => {
+  return (
+    <>
+      <NavMenuBox>
+        <Link to={PATH.index}>
+          <NavMenu title="Tech" active={path === PATH.index} />
+        </Link>
+        <Link to={PATH.diary}>
+          <NavMenu title="Diary" active={path === PATH.diary} />
+        </Link>
+        <Tooltip tip="개발중">
+          <NavMenu title="Lecture" active={path === PATH.lecture} />
+        </Tooltip>
+        <Tooltip tip="개발중">
+          <NavMenu title="AboutMe" active={path === PATH.aboutMe} />
+        </Tooltip>
+      </NavMenuBox>
+      <IconWrapper>
+        {path !== PATH.search ? (
+          <Link to={PATH.search}>
+            <IconButton size="xs" icon="search" />
+          </Link>
+        ) : (
+          <IconButton size="xs" icon="cancel" onClick={() => navigate(-1)} />
+        )}
+      </IconWrapper>
+    </>
+  );
+};
+
+const MobileMenu = ({
+  visible,
+  onClick,
+}: {
+  visible: boolean;
+  onClick: () => void;
+}) => (
+  <MobileMenuBox onClick={onClick}>
+    {visible ? (
+      <IconButton size="xs" icon={'cancel'} />
+    ) : (
+      <IconButton size="xs" icon={'menu'} />
+    )}
+  </MobileMenuBox>
+);
+
+interface HeaderProps {
+  path: string;
+}
+
+const Header = ({ path }: HeaderProps) => {
+  const isMobileSize = useResponsive(breakpoints.sm);
+  const [showDrawer, setShowDrawer] = useState(false);
+
+  const handleDrawer = () => setShowDrawer(prev => !prev);
+
+  useEffect(() => {
+    if (!isMobileSize) {
+      setShowDrawer(false);
+    }
+  }, [isMobileSize]);
+
+  return (
+    <>
+      <HeaderLayout>
+        <Link to={PATH.index}>
+          <Logo />
+        </Link>
+        <NavWrapper>
+          <DesktopMenu path={path} />
+          <MobileMenu visible={showDrawer} onClick={handleDrawer} />
+        </NavWrapper>
+      </HeaderLayout>
+      {isMobileSize && <Drawer path={path} visible={showDrawer} />}
+    </>
+  );
+};
+
+export default Header;
