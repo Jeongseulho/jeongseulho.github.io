@@ -98,14 +98,14 @@ const DesktopMenu = ({ path }: { path: string }) => {
         <Link to={PATH.index}>
           <NavMenu title="Tech" active={path === PATH.index} />
         </Link>
-        <Link to={PATH.diary}>
-          <NavMenu title="Diary" active={path === PATH.diary} />
-        </Link>
         <Tooltip tip="개발중">
-          <NavMenu title="Lecture" active={path === PATH.lecture} />
+          <NavMenu title="Diary" disabled={true} active={false} />
         </Tooltip>
         <Tooltip tip="개발중">
-          <NavMenu title="AboutMe" active={path === PATH.aboutMe} />
+          <NavMenu title="Lecture" disabled={true} active={false} />
+        </Tooltip>
+        <Tooltip tip="개발중">
+          <NavMenu title="AboutMe" disabled={true} active={false} />
         </Tooltip>
       </NavMenuBox>
       <IconWrapper>
