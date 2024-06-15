@@ -2804,7 +2804,7 @@ type queryMarkdownDataBySlugQueryVariables = Exact<{
 }>;
 
 
-type queryMarkdownDataBySlugQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly tableOfContents: string | null, readonly frontmatter: { readonly title: string | null, readonly summary: string | null, readonly date: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly thumbnail: { readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } }> } };
+type queryMarkdownDataBySlugQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly frontmatter: { readonly title: string | null, readonly summary: string | null, readonly date: string | null, readonly index: number | null, readonly update: boolean | null } | null } }> }, readonly file: { readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null };
 
 type searchContentQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
