@@ -105,7 +105,7 @@ const DesktopMenu = ({ path }: { path: string }) => {
           <NavMenu title="Lecture" disabled={true} active={false} />
         </Tooltip>
         <Tooltip tip="개발중">
-          <NavMenu title="AboutMe" disabled={true} active={false} />
+          <NavMenu title="About Me" disabled={true} active={false} />
         </Tooltip>
       </NavMenuBox>
       <IconWrapper>
