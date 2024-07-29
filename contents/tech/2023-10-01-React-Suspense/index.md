@@ -5,6 +5,8 @@ tags: [React]
 summary: Suspense를 사용한 이유와 사용하면서 겪었던 문제점, 해결 방법을 정리해보았다.
 thumbnail: ./image.png
 update: true
+sources: [happysisyphe, daleseo, byseop]
+sources_link: [https://happysisyphe.tistory.com/m/54, https://www.daleseo.com/react-suspense/#suspense-%EC%82%AC%EC%9A%A9-%ED%9B%84, https://byseop.com/post/@b6b6d8b1-e3ed-4b5c-84ee-43defc1875b3]
 ---
 
 ## 0. 들어가며
@@ -100,8 +102,3 @@ API 호출로 데이터를 보여줄 때, 한 페이지 내에서 관련된 데�
 
 ## 5. 마치며
 `Suspense`는 선언적 프로그래밍을 할 수 있게 해준다는 점에서 함수형 컴포넌트 및 `React Hooks`와 잘 어울린다고 생각한다, `isLoading`을 사용하여 로딩 상태를 관리하는 것보다 `Suspense`를 사용하여 로딩 상태를 관리하는 것이 훨씬 간결하고 가독성이 좋다.
-
-## 참고 사이트
-[happysisyphe](https://happysisyphe.tistory.com/m/54)  
-[daleseo](https://www.daleseo.com/react-suspense/#suspense-%EC%82%AC%EC%9A%A9-%ED%9B%84)  
-[byseop](https://byseop.com/post/@b6b6d8b1-e3ed-4b5c-84ee-43defc1875b3)

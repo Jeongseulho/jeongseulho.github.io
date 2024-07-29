@@ -1438,6 +1438,9 @@ type MarkdownRemarkFrontmatter = {
   readonly categories: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly date: Maybe<Scalars['Date']>;
   readonly index: Maybe<Scalars['Int']>;
+  readonly source: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly sources: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly sources_link: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly summary: Maybe<Scalars['String']>;
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly thumbnail: Maybe<File>;
@@ -1457,6 +1460,9 @@ type MarkdownRemarkFrontmatterFieldSelector = {
   readonly categories: InputMaybe<FieldSelectorEnum>;
   readonly date: InputMaybe<FieldSelectorEnum>;
   readonly index: InputMaybe<FieldSelectorEnum>;
+  readonly source: InputMaybe<FieldSelectorEnum>;
+  readonly sources: InputMaybe<FieldSelectorEnum>;
+  readonly sources_link: InputMaybe<FieldSelectorEnum>;
   readonly summary: InputMaybe<FieldSelectorEnum>;
   readonly tags: InputMaybe<FieldSelectorEnum>;
   readonly thumbnail: InputMaybe<FileFieldSelector>;
@@ -1468,6 +1474,9 @@ type MarkdownRemarkFrontmatterFilterInput = {
   readonly categories: InputMaybe<StringQueryOperatorInput>;
   readonly date: InputMaybe<DateQueryOperatorInput>;
   readonly index: InputMaybe<IntQueryOperatorInput>;
+  readonly source: InputMaybe<StringQueryOperatorInput>;
+  readonly sources: InputMaybe<StringQueryOperatorInput>;
+  readonly sources_link: InputMaybe<StringQueryOperatorInput>;
   readonly summary: InputMaybe<StringQueryOperatorInput>;
   readonly tags: InputMaybe<StringQueryOperatorInput>;
   readonly thumbnail: InputMaybe<FileFilterInput>;
@@ -1479,6 +1488,9 @@ type MarkdownRemarkFrontmatterSortInput = {
   readonly categories: InputMaybe<SortOrderEnum>;
   readonly date: InputMaybe<SortOrderEnum>;
   readonly index: InputMaybe<SortOrderEnum>;
+  readonly source: InputMaybe<SortOrderEnum>;
+  readonly sources: InputMaybe<SortOrderEnum>;
+  readonly sources_link: InputMaybe<SortOrderEnum>;
   readonly summary: InputMaybe<SortOrderEnum>;
   readonly tags: InputMaybe<SortOrderEnum>;
   readonly thumbnail: InputMaybe<FileSortInput>;
@@ -2804,7 +2816,7 @@ type queryMarkdownDataBySlugQueryVariables = Exact<{
 }>;
 
 
-type queryMarkdownDataBySlugQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly frontmatter: { readonly title: string | null, readonly summary: string | null, readonly date: string | null, readonly index: number | null, readonly update: boolean | null } | null } }> }, readonly file: { readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null };
+type queryMarkdownDataBySlugQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly tableOfContents: string | null, readonly frontmatter: { readonly title: string | null, readonly summary: string | null, readonly date: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly thumbnail: { readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } }> } };
 
 type searchContentQueryQueryVariables = Exact<{ [key: string]: never; }>;
 

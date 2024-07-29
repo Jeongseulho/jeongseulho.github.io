@@ -5,6 +5,8 @@ tags: [React]
 summary: React에서 key의 역할과 인덱스를 권장하지 않는 이유
 thumbnail: ./image.png
 update: true
+sources: [goidle, react.dev.learn, ko.legacy.reactjs, Robin Pokorny]
+sources_link: [https://goidle.github.io/react/in-depth-react-reconciler_3/, https://react.dev/learn/preserving-and-resetting-state#different-components-at-the-same-position-reset-state, https://ko.legacy.reactjs.org/docs/lists-and-keys.html, https://robinpokorny.medium.com/index-as-a-key-is-an-anti-pattern-e0349aece318]
 ---
 
 
@@ -159,9 +161,3 @@ update: true
 ## 4. 마치며
 즉 `key`는 개발자가 해당 컴포넌트가 리렌더 이전과 이후 동일한 컴포넌트인지 알려주는 역할을 한다.  
 필요에 따라 `fiber node`를 재사용하여 최적화를 하거나 의도적으로 다른 컴포넌트로 판단하도록 유도하여 상태를 초기화 할 수 있다.
-
-## 참고 사이트
-[goidle](https://goidle.github.io/react/in-depth-react-reconciler_3/)
-[React](https://react.dev/learn/preserving-and-resetting-state#different-components-at-the-same-position-reset-state)
-[react.js](https://ko.legacy.reactjs.org/docs/lists-and-keys.html)
-[Robin Pokorny](https://robinpokorny.medium.com/index-as-a-key-is-an-anti-pattern-e0349aece318)

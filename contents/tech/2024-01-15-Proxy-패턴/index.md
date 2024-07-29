@@ -5,6 +5,8 @@ tags: [디자인 패턴, JS]
 summary: JS에서 Proxy 객체와 사용법
 thumbnail: ./image.png
 update: true
+sources: [superLipbalm님의 블로그]
+sources_link: [https://gist.github.com/superLipbalm/dea43695b66897d1b4d246b402aab320]
 ---
 
 
@@ -131,6 +133,3 @@ const createExpensiveFunction = () => {
 
 ## 3. 마치며
 데코레이터를 사용하는 것과 비슷한 느낌이다, `Typescript`에서 제공하는 데코레이터를 리액트에서 활용을 못해서 아쉬웠는데 `Proxy`를 이용하면 데코레이터와 비슷한 기능을 구현할 수 있을 것 같다.
-
-## 4. 참고 사이트
-[uperLipbalm](https://gist.github.com/superLipbalm/dea43695b66897d1b4d246b402aab320)

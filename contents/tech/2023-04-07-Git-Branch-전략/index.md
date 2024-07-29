@@ -5,6 +5,8 @@ tags: [Git]
 summary: git-flow와 github-flow에 대해 정리
 thumbnail: ./image.jpeg
 update: true
+sources: [inpa님의 tistory]
+sources_link: [https://inpa.tistory.com/entry/GIT-%E2%9A%A1%EF%B8%8F-github-flow-git-flow-%F0%9F%93%88-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EC%A0%84%EB%9E%B5]
 ---
 
 ## 📌branch 전략의 필요성
@@ -115,5 +117,3 @@ update: true
 
 - 1개월 이상의 긴 호흡으로 개발하여 주기적으로 배포, QA 및 테스트, hotfix 등 수행할 수 있는 여력이 있는 팀이라면 git-flow
 - 수시로 릴리즈 되어야 할 필요가 있는 서비스를 지속적으로 테스트하고 배포하는 팀이라면 github-flow
-
-출처 : https://inpa.tistory.com/entry/GIT-%E2%9A%A1%EF%B8%8F-github-flow-git-flow-%F0%9F%93%88-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EC%A0%84%EB%9E%B5

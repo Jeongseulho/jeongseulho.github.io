@@ -5,6 +5,8 @@ tags: [JS]
 summary: JS의 비동기 처리 방식인 콜백, Promise, async/await에 대해 정리
 thumbnail: ./image.png
 update: true
+sources: [poiemaweb, pozafly님의 블로그]
+sources_link: [https://poiemaweb.com/es6-promise, https://pozafly.github.io/javascript/event-loop-and-async/]
 ---
 
 ## 📌동기와 비동기
@@ -261,5 +263,3 @@ console.log("After function!"); // 이건 기다려주지 않음
   ![](https://velog.velcdn.com/images/wjdtmfgh/post/87018daa-cde5-41d1-8c12-5252fa2b71d0/image.gif)
 - 콜스택 비어서 `async`함수를 콜스택으로 보내고 남은 부분 실행
   ![](https://velog.velcdn.com/images/wjdtmfgh/post/35675169-5465-43c6-a667-d94eaa202ce9/image.gif)
-
-출처 : https://poiemaweb.com/es6-promise, https://pozafly.github.io/javascript/event-loop-and-async/

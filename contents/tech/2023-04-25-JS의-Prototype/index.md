@@ -5,6 +5,8 @@ tags: [JS]
 summary: JS의 Prototype 객체의 개념과 활용
 thumbnail: ./image.png
 update: true
+sources: [nextree님의 블로그]
+sources_link: [https://www.nextree.co.kr/p7323/]
 ---
 
 ## 📌JS에서 클래스
@@ -115,5 +117,3 @@ kor1.getName(); // 지수
 var kor2 = new Korean(); // deault 이름
 kor2.getName();
 ```
-
-출처 : https://www.nextree.co.kr/p7323/
