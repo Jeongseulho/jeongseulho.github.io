@@ -21,8 +21,6 @@ const Tags = styled.div`
   gap: 16px;
 
   width: 100%;
-  padding-bottom: 60px;
-  border-bottom: 2px solid ${({ theme }) => theme.colors.bluegray[100]};
 `;
 
 const Tag = styled.div`
@@ -79,13 +77,44 @@ const ContentLink = styled.a`
   }
 `;
 
+const SourceLink = styled.a`
+  text-decoration: underline;
+  color: ${({ theme }) => theme.colors.secondary[800]};
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.secondary[500]};
+  }
+`;
+
+const Sources = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 2px solid ${({ theme }) => theme.colors.bluegray[100]};
+`;
+
 interface ContentFooterProps {
   previous: PageContextType | null;
   next: PageContextType | null;
   tags: string[];
+  sources: string[];
+  sources_link: string[];
 }
 
-const ContentFooter = ({ next, previous, tags }: ContentFooterProps) => {
+const ContentFooter = ({
+  next,
+  previous,
+  tags,
+  sources,
+  sources_link,
+}: ContentFooterProps) => {
   return (
     <Wrapper>
       <Tags>
@@ -95,6 +124,14 @@ const ContentFooter = ({ next, previous, tags }: ContentFooterProps) => {
           </Link>
         ))}
       </Tags>
+      <Sources>
+        <div>출처</div>
+        {sources.map((source, index) => (
+          <SourceLink href={sources_link[index]} key={`${source}_${index}`}>
+            {source}
+          </SourceLink>
+        ))}
+      </Sources>
       <FooterNav>
         <nav>
           {previous !== null && (

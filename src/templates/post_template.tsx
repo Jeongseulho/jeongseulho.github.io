@@ -43,6 +43,8 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
           childImageSharp: { gatsbyImageData },
           publicURL,
         },
+        sources,
+        sources_link,
       },
     },
   } = data.allMarkdownRemark.edges[0];
@@ -60,7 +62,13 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
       <PostLayout>
         <ContentHead title={title} date={date} />
         <ContentBody html={html} thumbnail={gatsbyImageData} />
-        <ContentFooter previous={previous} next={next} tags={tags} />
+        <ContentFooter
+          previous={previous}
+          next={next}
+          tags={tags}
+          sources={sources}
+          sources_link={sources_link}
+        />
         <CommentWidget />
       </PostLayout>
     </BaseLayout>
@@ -87,6 +95,8 @@ export const queryMarkdownDataBySlug = graphql`
               }
               publicURL
             }
+            sources
+            sources_link
           }
         }
       }
