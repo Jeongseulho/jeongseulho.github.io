@@ -5,6 +5,7 @@ tags: [JS]
 summary: 이벤트 캡처링, 버블링과 이를 활용한 이벤트 위임 방법을 정리
 thumbnail: ./image.png
 update: true
+sources: [ingg님의 블로그, programmingsummaries님의 티스토리, javascript.info]
 ---
 
 
@@ -132,6 +133,3 @@ child.addEventListener("click", (e) => {
   > 중첩 메뉴를 만들었다 가정합시다. 각 서브메뉴(submenu)에 해당하는 요소에서 클릭 이벤트를 처리하도록 하고, 상위 메뉴의 클릭 이벤트 핸들러는 동작하지 않도록 stopPropagation을 적용합니다.
   > 사람들이 페이지에서 어디를 클릭했는지 등의 행동 패턴을 분석하기 위해, window내에서 발생하는 클릭 이벤트 전부를 감지하기로 결정합니다. 일부 분석 시스템은 그렇게 분석합니다. 이런 분석 시스템의 코드는 클릭 이벤트를 감지하기 위해 document.addEventListener('click'…)을 사용합니다.
   > stopPropagation로 버블링을 막아놓은 영역에선 분석 시스템의 코드가 동작하지 않기 때문에, 분석이 제대로 되지 않습니다. 안타깝게도 stopPropagation을 사용한 영역은 '죽은 영역(dead zone)'이 되어버립니다.
-
-출처 : https://ingg.dev/event-delegation/, https://programmingsummaries.tistory.com/313,
-https://ko.javascript.info/bubbling-and-capturing

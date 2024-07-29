@@ -5,6 +5,8 @@ tags: [React, state]
 summary: React의 상태 변화에 따른 렌더링 최적화인 early bailout의 조건과 과정을 정리
 thumbnail: ./image.png
 update: true
+sources: [JSer.dev naver D2, Boaz youtube, bumkeyy,tnghgks]
+sources_link: [https://jser.dev/posts/react-18-early-bailout, https://www.youtube.com/watch?v=3XaXGZk3y5A, https://bumkeyy.tistory.com/1, https://tnghgks.tistory.com/1]
 ---
 
 
@@ -271,10 +273,3 @@ function beginWork(
 ## 4. 마치며
 굉장히 Low한 레벨의 내용이라 이해하는데 굉장히 오래걸리고 어려웠다.  
 중요한 점은 `state`가 변하지 않는 `setState` 호출에도 리렌더링 최적화가 보장되지 않는다는 것이다.
-
-## 참고 사이트
-[JSer.dev](https://jser.dev/2023-06-19-how-does-usestate-work/#52-setstate-with-same-value-might-still-trigger-re-render)  
-[naver D2](https://d2.naver.com/helloworld/2690975)  
-[Boaz youtube](https://www.youtube.com/watch?v=2EbCEluOO9Y&list=PLpq56DBY9U2B6gAZIbiIami_cLBhpHYCA&index=3)  
-[bumkeyy](https://bumkeyy.gitbook.io/bumkeyy-code/frontend/a-deep-dive-into-react-fiber-internals)
-[tnghgks](https://velog.io/@tnghgks/React-Fiber%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C)

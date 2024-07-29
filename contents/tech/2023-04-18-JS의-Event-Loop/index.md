@@ -5,6 +5,8 @@ tags: [JS]
 summary: 실제 코드를 통해 JS의 이벤트 루프의 동작 방식을 정리
 thumbnail: ./image.png
 update: true
+sources: [pozafly님의 블로그]
+sources_link: [https://pozafly.github.io/javascript/event-loop-and-async/]
 ---
 
 ## 📌JS의 실행 환경 구조
@@ -97,5 +99,3 @@ button.addEventListener(function () {
 
 - 이렇게 쓰면 `showWaitingMessage();`가 호출 스택에서 렌더링 까지 완료되고 `longTakingProcess();`가 수행 되게 할 수 있음
 - `setTimeout()`을 쓰면 코드를 어디에 써도 마지막에 실행 시킬 수 있다.
-
-출처 및 참고 : https://pozafly.github.io/javascript/event-loop-and-async/

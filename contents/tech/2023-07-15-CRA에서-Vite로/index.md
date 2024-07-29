@@ -5,6 +5,8 @@ tags: [React]
 summary: Vite를 선택한 이유
 thumbnail: ./image.png
 update: true
+sources: [ko.vitejs.dev, semaphoreci]
+sources_link: [https://ko.vitejs.dev/guide/why.html, https://semaphoreci.com/blog/vite]
 ---
 
 
@@ -59,7 +61,3 @@ update: true
 
 ## 3. 마치며
 `vite`는 개발 환경에서의 높은 생산성을 도와주며 개발 환경과 프로덕션 환경의 설정이 달라 빌드 안정성이 낮은 단점이 있다, 하지만 구현할 기능이 많다고 생각되어 `vite`를 선택하여 개발 생산성을 우선시 하였다.
-
-## 4. 참고
-[vite 공식 문서](https://ko.vitejs.dev/guide/why.html)
-[semaphoreci](https://semaphoreci.com/blog/vite)
