@@ -104,8 +104,8 @@ interface ContentFooterProps {
   previous: PageContextType | null;
   next: PageContextType | null;
   tags: string[];
-  sources: string[];
-  sources_link: string[];
+  sources?: string[];
+  sources_link?: string[];
 }
 
 const ContentFooter = ({
@@ -115,6 +115,8 @@ const ContentFooter = ({
   sources,
   sources_link,
 }: ContentFooterProps) => {
+  const isSources =
+    sources && sources_link && sources.length === sources_link.length;
   return (
     <Wrapper>
       <Tags>
@@ -124,14 +126,16 @@ const ContentFooter = ({
           </Link>
         ))}
       </Tags>
-      <Sources>
-        <div>출처</div>
-        {sources.map((source, index) => (
-          <SourceLink href={sources_link[index]} key={`${source}_${index}`}>
-            {source}
-          </SourceLink>
-        ))}
-      </Sources>
+      {isSources && (
+        <Sources>
+          <div>출처</div>
+          {sources.map((source, index) => (
+            <SourceLink href={sources_link![index]} key={`${source}_${index}`}>
+              {source}
+            </SourceLink>
+          ))}
+        </Sources>
+      )}
       <FooterNav>
         <nav>
           {previous !== null && (

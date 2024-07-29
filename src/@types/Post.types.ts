@@ -34,8 +34,8 @@ export type PostFrontMatterType = {
     };
     publicURL: string;
   };
-  sources: string[];
-  sources_link: string[];
+  sources?: string[];
+  sources_link?: string[];
 };
 
 export type DiaryType = {
