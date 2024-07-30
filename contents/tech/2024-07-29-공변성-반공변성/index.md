@@ -11,7 +11,7 @@ sources_link: [https://inpa.tistory.com/entry/TS-%F0%9F%93%98-%ED%83%80%EC%9E%85
 
 ## 1. 공변성과 반공변성
 - 공변성 : A가 B의 서브타입이면, `T<A>`는 `T<B>`의 서브타입이다.
-- 반공변성 : A가 B의 서브타입이면, `T<B>`는 `T<A>의` 서브타입이다.
+- 반공변성 : A가 B의 서브타입이면, `T<B>`는 `T<A>`의 서브타입이다.
 
 타입스크립트는 기본적으로 공변성을 따르지만 `strictFunctionTypes` 옵션이 `true`인 경우 함수의 파라미터는 반공변성을 따른다.(`strict mode`가 아닌 경우 이변성을 따름)
 
