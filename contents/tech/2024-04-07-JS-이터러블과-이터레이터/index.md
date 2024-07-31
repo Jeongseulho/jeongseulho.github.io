@@ -15,10 +15,10 @@ update: true
 
 위처럼 통일된 프로토콜을 통해 데이터 소비자가 데이터 공급자의 내부 구조를 알 필요 없이 다양한 데이터 공급자를 사용할 수 있다.  
 
-## 1 Iteration Protocol
+## 1. Iteration Protocol
 `Iteration Protocol`은 `Iterable Protocol`과 `Iterator Protocol`로 구성된다.  
 
-### 1.1 Iterable Protocol과 Iterable
+### 1.1. Iterable Protocol과 Iterable
 `Iterable Protocol` 규칙을 지키는 객체는 `Iterable`이라고 부르며 다음과 같은 규칙을 지켜야 한다.
 1. `[Symbol.iterator]`라는 메소드가 있어야 한다(직접구현 또는 `Prototype` 상속).
 2. `[Symbol.iterator]` 메소드는 `Iterator` 객체를 반환해야 한다.
@@ -36,7 +36,7 @@ const iterable = {
 };
 ```
 
-### 1.2 Iterator Protocol과 Iterator
+### 1.2. Iterator Protocol과 Iterator
 `Iterator Protocol` 규칙을 지키는 객체는 `Iterator`라고 부르며 다음과 같은 규칙을 지켜야 한다.
 1. `next`라는 메소드가 있어야 한다.
 2. `next` 메소드는 `IteratorResult` 객체를 반환해야 한다.
@@ -51,7 +51,7 @@ const iterator = {
 };
 ```
 
-### 1.3 커스텀 Iterable 객체 구현
+### 1.3. 커스텀 Iterable 객체 구현
 
 ```js
 // 이터러블을 구현할 객체
@@ -81,7 +81,7 @@ let 나만의이터러블 = {
 };
 ```
 
-### 1.4 for...of 순회 로직
+### 1.4. for...of 순회 로직
 위에서 구현한 `나만의이터러블` 객체를 순회 해보겠다.
 
 ```js
@@ -114,7 +114,7 @@ for (let value of 나만의이터러블) {
 }
 ```
 
-### 1.5 well-formed Iterable
+### 1.5. well-formed Iterable
 `Iterator`이면서 `Iterable`인 객체를 `well-formed Iterable`이라고 부른다.  
 간단히말하면 `나만의이터러블[Symbol.iterator]` === `나만의이터러블`으로 `Symbol.iterator`에서 자기 자신을 반환하는 객체를 말한다.
 
@@ -142,7 +142,7 @@ let 나만의이터러블 = {
 };
 ```
 
-## 2 Generator
+## 2. Generator
 `Generator`는 `Generator Function`에서 반환되는 객체이며 `well-formed Iterable`으로도 평가된다.  
 `Generator Function`은 `well-formed Iterable`을 쉽게 만들 수 있도록 해준다.  
 `Generator Function`은 `function*`로 선언하며 `yield` 키워드를 사용하여 값을 반환한다.
@@ -158,7 +158,7 @@ const 제네레이터 = function* () {
 };
 ```
 
-### 2.1 yield, next 기본 동작
+### 2.1. yield, next 기본 동작
 제네레이터 함수는 `yield`로 실행을 중지할 수 있다. 
 
 ```js
@@ -184,7 +184,7 @@ for (let value of 제네레이터함수()) {
 }
 ```
 
-### 2.2 return과 throw를 통해 제네레이터 제어
+### 2.2. return과 throw를 통해 제네레이터 제어
 `return`을 통해 `done: true`로 반환하며 이후 `next` 호출 시 `value: undefined`를 반환한다.
 ```js
 function* gen() {
@@ -219,7 +219,7 @@ iter.next() // Uncaught 에러 발생!!
 iter.next() // { value: undefined, done: true }
 ```
 
-### 2.2 제네레이터 컴포지션
+### 2.3. 제네레이터 컴포지션
 `yield*` 이후 다른 제네레이터를 호출하여 제네레이터를 합성할 수 있다.  
 숫자 0~9, 알파벳 대문자, 알파벳 소문자를 순회하는 제네레이터를 만들어보자.
 

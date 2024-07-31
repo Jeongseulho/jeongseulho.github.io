@@ -8,12 +8,12 @@ tags: [FE, Test]
 
 vitest와 testing-library의 사용법 정리
 
-## 1 JSDOM
+## 1. JSDOM
 
 `Jest` 및 `Vitest`와 같은 단위 테스트를 위한 테스트 프레임 워크는 `node.js` 환경에서 실행되기 때문에 `DOM`을 사용할 수 없다. 따라서 `JSDOM`을 사용하여 `DOM`을 가상으로 구현한다.  
 `JSDOM`은 실제 `DOM`을 모방한 것이므로 완벽하게 일치하지는 않는다, 하지만 브라우저에 비해 빠르게 테스트를 실행할 수 있다.
 
-## 2 Vitest 설정 및 사용법
+## 2. Vitest 설정 및 사용법
 
 ### (1) vite.config.js 설정
 
@@ -143,7 +143,7 @@ describe("A-test", () => {
 
 
 
-## 3 Testing Library란?
+## 3. Testing Library란?
 UI 컴포넌트 테스트를 위한 라이브러리, 사용자가 사용하는 방식으로 테스트 하자는 철학을 가지고 있다.  
 `(DOM을 쿼리(조회)하고 사용자의 행동을 시뮬레이션하고 결과를 검증)`
 

@@ -12,7 +12,7 @@ sources_link: [https://happysisyphe.tistory.com/m/54, https://www.daleseo.com/re
 ## 0. 들어가며
 `Suspense`를 사용한 이유와 사용하면서 겪었던 문제점, 해결 방법을 정리해보았다.
 
-## 1 Suspense란?
+## 1. Suspense란?
 `Suspense`로 감싸진 컴포넌트에서 호출하는 Promise가 pending이면 `fallback` props로 전달된 컴포넌트를 렌더링하며 resolve되면 `children` props로 전달된 컴포넌트를 렌더링한다.  
 
 ```jsx
@@ -30,7 +30,7 @@ function Profile() {
 }
 ```
 
-## 2 왜 Suspense를 사용하는가?
+## 2. 왜 Suspense를 사용하는가?
 
 ### (1) 선언적 코드
 `Suspense`를 사용하지 않은 코드는 다음과 같다.
@@ -80,7 +80,7 @@ API 호출로 데이터를 보여줄 때, 한 페이지 내에서 관련된 데�
 이렇게 하면 API 호출을 묶어서 관리할 수 있고, 로딩 구간을 분리할 수 있다.
 
 
-## 3 Suspense의 waterfall 문제
+## 3. Suspense의 waterfall 문제
 `Suspense`를 사용하면서 한 컴포넌트 내에서 여러개의 API를 호출하는 경우가 있었다.  
 이 경우, API 호출이 병렬로 일어나지 않고, 하나가 끝나야 다음 요청이 시작되는 것을 Waterfall 문제라고 한다.
 
@@ -89,7 +89,7 @@ API 호출로 데이터를 보여줄 때, 한 페이지 내에서 관련된 데�
 위에서 설명한대로 `Suspense`는 `Promise` 상태에 따라서 `children` 또는 `fallback` 컴포넌트를 반환. 즉, `pending` 상태일 때에는 `<Loading />`을 반환하고 있고, `children`을 실행시키지 않는다.  
 그렇기 때문에, 하나의 API 요청이 발생하면, `children` 컴포넌트의 실행은 멈추고 `<Loading />`을 반환, `Promise`가 `settled` 상태가 되면 다시 `children` 컴포넌트를 렌더링 한다.
 
-## 4 컴포넌트 분리하여 해결
+## 4. 컴포넌트 분리하여 해결
 해결은 간단하다 하나의 컴포넌트에서 여러개의 API를 호출하는 것이 아니라, 각각의 API를 호출하는 컴포넌트를 분리하여 해결할 수 있다.  
 ```jsx
 <Suspense fallback={<p>Loading userInfo</p>}>
@@ -100,5 +100,5 @@ API 호출로 데이터를 보여줄 때, 한 페이지 내에서 관련된 데�
 </Suspense>
 ```
 
-## 5 마치며
+## 5. 마치며
 `Suspense`는 선언적 프로그래밍을 할 수 있게 해준다는 점에서 함수형 컴포넌트 및 `React Hooks`와 잘 어울린다고 생각한다, `isLoading`을 사용하여 로딩 상태를 관리하는 것보다 `Suspense`를 사용하여 로딩 상태를 관리하는 것이 훨씬 간결하고 가독성이 좋다.

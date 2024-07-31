@@ -14,7 +14,7 @@ sources_link: [https://ko.vitejs.dev/guide/why.html, https://semaphoreci.com/blo
 `React`프로젝트를 혼자 공부하면서 `create-react-app`을 사용했었다.  
 공부하면서 `vite`를 알게 되었고, `vite`를 선택한 이유를 정리해보려고 한다.
 
-## 1 vite의 단어의 의미
+## 1. vite의 단어의 의미
 `vite`는 프랑스어로 빠른이라는 뜻이다.  
 실제 개발 환경에서 `vite`는 서버를 구동과 `Hot Reload`가 `create-react-app`보다 빠르다.
 
@@ -50,7 +50,7 @@ sources_link: [https://ko.vitejs.dev/guide/why.html, https://semaphoreci.com/blo
 >종속성 모듈에 대한 요청은 'Cache-Control: max-age=31536000, immutable' 헤더를 통해 캐시, 이는 브라우저가 이 파일들을 오랜 기간 동안 캐시하고, 변경되지 않는 것으로 간주
 
 
-## 2 vite의 단점
+## 2. vite의 단점
 `vite`는 개발 환경에서의 번들러는 `esbuild`를 사용하지만 프로덕션 환경에서는 `rollup`을 사용한다. 이처럼 개발 환경과 프로덕션 환경의 설정이 다르기 때문에 빌드 안정성이 낮다.
 
 ### (1) 왜 다른 번들러를 사용하는가?
@@ -59,5 +59,5 @@ sources_link: [https://ko.vitejs.dev/guide/why.html, https://semaphoreci.com/blo
 `esbuild`은 빠르지만 비교적 최근에 나온 번들러이기 때문에 안정성이 떨어지며 다양하고 유연한 설정을 제공하지 않는다.  
 반면에 `rollup`은 다양하고 유연한 설정을 제공하며 복잡한 빌드 요구사항을 충족시킬 수 있다.
 
-## 3 마치며
+## 3. 마치며
 `vite`는 개발 환경에서의 높은 생산성을 도와주며 개발 환경과 프로덕션 환경의 설정이 달라 빌드 안정성이 낮은 단점이 있다, 하지만 구현할 기능이 많다고 생각되어 `vite`를 선택하여 개발 생산성을 우선시 하였다.

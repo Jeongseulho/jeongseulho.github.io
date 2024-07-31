@@ -7,7 +7,7 @@ tags: [FE, Test]
 ## 0. 들어가며
 이전 작성한 테스트 코드들이 `Github PR`이 생성될 때마다 실행되도록 `Github Action`을 설정하는 방법을 정리
 
-## 1 vitest.yml 작성
+## 1. vitest.yml 작성
 
 `.github/workflows/vitest.yml` 파일을 생성하고 아래와 같이 작성한다.
 
