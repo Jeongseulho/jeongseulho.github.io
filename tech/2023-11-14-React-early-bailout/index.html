@@ -813,7 +813,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <p>우연히 유튜브에서 면접 질문을 보았다. 다음 코드의 콘솔을 맞추는 문제인데</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="63128509690893720000"
+              data-toaster-id="45893863340436414000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -823,7 +823,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 
   useEffect(() => {
     setState(1);
-  }, [state]);`, `63128509690893720000`)"
+  }, [state]);`, `45893863340436414000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -844,7 +844,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <p>다음 코드를 확인해 보자.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="50590721607741780000"
+              data-toaster-id="51865988071499290000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -854,7 +854,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 
   useEffect(() => {
     setState(0);
-  }, [state]);`, `50590721607741780000`)"
+  }, [state]);`, `51865988071499290000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -870,11 +870,11 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     <span class="token function">setState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>state<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>이 코드의 결과는 분명히 <code class="language-text">state 0</code>이다. 분명히 리렌더링이 일어나지 않는다. 내가 생각한 것처럼 <code class="language-text">setState(0)</code>이 호출되어도 <code class="language-text">0</code> => <code class="language-text">0</code>으로 상태가 변하지 않기 때문이다, 근데 왜 처음 문제의 코드는 리렌더링이 일어나는 것일까?</p>
-<h2 id="1-early-bailout-조건" style="position:relative;"><a href="#1-early-bailout-%EC%A1%B0%EA%B1%B4" aria-label="1 early bailout 조건 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1 early bailout 조건</h2>
+<h2 id="1-early-bailout-조건" style="position:relative;"><a href="#1-early-bailout-%EC%A1%B0%EA%B1%B4" aria-label="1 early bailout 조건 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. early bailout 조건</h2>
 <p><code class="language-text">setState</code>에서 이전 상태와 다음 상태를 비교하여 상태가 변하지 않으면 리렌더링을 하지 않도록 최적화 하는 것을 <code class="language-text">early bailout</code>이라고 한다. <code class="language-text">setState</code>를 정의하는 소스코드를 확인해 보자.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="88428816314331990000"
+              data-toaster-id="51422446320005340000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -900,7 +900,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
       }
     }
 
-    const root = enqueueConcurrentHookUpdate(fiber, queue, update, lane);`, `88428816314331990000`)"
+    const root = enqueueConcurrentHookUpdate(fiber, queue, update, lane);`, `51422446320005340000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -934,7 +934,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <p>위 코드에서</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="20044509354187514000"
+              data-toaster-id="11868001195217625000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -942,7 +942,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
               onClick="copyToClipboard(`if (is(eagerState, currentState)) {
   enqueueConcurrentHookUpdateAndEagerlyBailout(fiber, queue, update);
   return;
-}`, `20044509354187514000`)"
+}`, `11868001195217625000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -959,7 +959,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <p>이 부분이 실행되기 위해 또 다른 조건문이 있는데 그것이</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="34078580422873526000"
+              data-toaster-id="5053646171720816000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -969,7 +969,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
       (alternate === null || alternate.lanes === NoLanes)
     ) { 
       ...
-    }`, `34078580422873526000`)"
+    }`, `5053646171720816000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -993,7 +993,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 </ol>
 <p>이렇게 3가지 조건이 모두 만족해야 <code class="language-text">early bailout</code>이 발생한다.<br>
 <code class="language-text">fiber</code>,<code class="language-text">alternate</code>와 <code class="language-text">lanes</code>, <code class="language-text">NoLanes</code>은 무엇인지 알아보자.</p>
-<h2 id="2-virtual-dom" style="position:relative;"><a href="#2-virtual-dom" aria-label="2 virtual dom permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2 Virtual DOM</h2>
+<h2 id="2-virtual-dom" style="position:relative;"><a href="#2-virtual-dom" aria-label="2 virtual dom permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Virtual DOM</h2>
 <p><code class="language-text">fiber, alternate, lanes, NoLanes</code> 모두 <code class="language-text">Virtual DOM</code>의 구조와 관련있는 용어이다.</p>
 <h3 id="1-virtual-dom의-구조" style="position:relative;"><a href="#1-virtual-dom%EC%9D%98-%EA%B5%AC%EC%A1%B0" aria-label="1 virtual dom의 구조 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>(1) Virtual DOM의 구조</h3>
 <p>위 코드에서 <code class="language-text">fiber</code>란 <code class="language-text">Virtual DOM</code>을 이루는 각 노드를 지칭한다, 또한 <code class="language-text">Virtual DOM</code>은 더블 버퍼링 구조로 2가지의 트리가 존재하는데, <code class="language-text">current V DOM</code>과 <code class="language-text">workInProgress V DOM</code>이다.</p>
@@ -1039,7 +1039,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 </ul>
 </li>
 </ul>
-<h2 id="3-lanes-코드-해석" style="position:relative;"><a href="#3-lanes-%EC%BD%94%EB%93%9C-%ED%95%B4%EC%84%9D" aria-label="3 lanes 코드 해석 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3 lanes 코드 해석</h2>
+<h2 id="3-lanes-코드-해석" style="position:relative;"><a href="#3-lanes-%EC%BD%94%EB%93%9C-%ED%95%B4%EC%84%9D" aria-label="3 lanes 코드 해석 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. lanes 코드 해석</h2>
 <p>위 개념을 기반으로 조건문을 해석해보면</p>
 <ol>
 <li>
@@ -1057,12 +1057,12 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 위 코드에서 <code class="language-text">early bailout</code>이 발생하지 않을때</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="75698490703520870000"
+              data-toaster-id="63476725670300870000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`const root = enqueueConcurrentHookUpdate(fiber, queue, update, lane);`, `75698490703520870000`)"
+              onClick="copyToClipboard(`const root = enqueueConcurrentHookUpdate(fiber, queue, update, lane);`, `63476725670300870000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1075,7 +1075,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <p>이 함수가 실행된다. 이 함수는</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="74825109982583160000"
+              data-toaster-id="1114698346144393700"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1093,7 +1093,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 
   ...
 
-}`, `74825109982583160000`)"
+}`, `1114698346144393700`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1119,7 +1119,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <p>이렇게 정의 되며 여기서 <code class="language-text">enqueueUpdate</code>가 호출된다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="12046735015323984000"
+              data-toaster-id="82553964250175900000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1138,7 +1138,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
   if (alternate !== null) {
     alternate.lanes = mergeLanes(alternate.lanes, lane);
   }
-}`, `12046735015323984000`)"
+}`, `82553964250175900000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1168,7 +1168,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <p><code class="language-text">lanes</code>가 <code class="language-text">NoLanes</code>가 되는 코드는</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="39281723174721380000"
+              data-toaster-id="69252567029095880000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1181,7 +1181,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
   ...
   workInProgress.lanes = NoLanes;
   ...
-}`, `39281723174721380000`)"
+}`, `69252567029095880000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1213,11 +1213,11 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <li><code class="language-text">setState</code> 호출 이후 <code class="language-text">render phase</code>에서 <code class="language-text">workInProgress</code>(1번에서의 <code class="language-text">fiber</code>)의 <code class="language-text">lanes</code>가 <code class="language-text">clean</code>하게 된다.</li>
 </ol>
 <p>이제 처음 의문이 생긴 코드를 해석해보자.</p>
-<h2 id="3-문제-코드-해석" style="position:relative;"><a href="#3-%EB%AC%B8%EC%A0%9C-%EC%BD%94%EB%93%9C-%ED%95%B4%EC%84%9D" aria-label="3 문제 코드 해석 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3 문제 코드 해석</h2>
+<h2 id="3-문제-코드-해석" style="position:relative;"><a href="#3-%EB%AC%B8%EC%A0%9C-%EC%BD%94%EB%93%9C-%ED%95%B4%EC%84%9D" aria-label="3 문제 코드 해석 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. 문제 코드 해석</h2>
 <h3 id="1-early-bailout이-발생하는-코드" style="position:relative;"><a href="#1-early-bailout%EC%9D%B4-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EC%BD%94%EB%93%9C" aria-label="1 early bailout이 발생하는 코드 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>(1) early bailout이 발생하는 코드</h3>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="67716656206844890000"
+              data-toaster-id="8025222578105163000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1227,7 +1227,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 
   useEffect(() => {
     setState(0);
-  }, [state]);`, `67716656206844890000`)"
+  }, [state]);`, `8025222578105163000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1256,7 +1256,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <h3 id="2-early-bailout이-발생하지-않는-코드" style="position:relative;"><a href="#2-early-bailout%EC%9D%B4-%EB%B0%9C%EC%83%9D%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94-%EC%BD%94%EB%93%9C" aria-label="2 early bailout이 발생하지 않는 코드 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>(2) early bailout이 발생하지 않는 코드</h3>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="62440685464416590000"
+              data-toaster-id="42018220495703890000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1266,7 +1266,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 
   useEffect(() => {
     setState(1);
-  }, [state]);`, `62440685464416590000`)"
+  }, [state]);`, `42018220495703890000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1317,7 +1317,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <li><code class="language-text">beginWork</code> 호출</li>
 </ol>
 <p>5번에서 <code class="language-text">setState(1)</code>이 호출되어 1 => 1로 상태가 변하지 않았지만 <code class="language-text">early bailout</code>으로 빠지지 않았고 6번에서 <code class="language-text">render phase</code>가 진행되면서 컴포넌트가 다시 실행되는 것이다.</p>
-<h2 id="4-마치며" style="position:relative;"><a href="#4-%EB%A7%88%EC%B9%98%EB%A9%B0" aria-label="4 마치며 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4 마치며</h2>
+<h2 id="4-마치며" style="position:relative;"><a href="#4-%EB%A7%88%EC%B9%98%EB%A9%B0" aria-label="4 마치며 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. 마치며</h2>
 <p>굉장히 Low한 레벨의 내용이라 이해하는데 굉장히 오래걸리고 어려웠다.<br>
 중요한 점은 <code class="language-text">state</code>가 변하지 않는 <code class="language-text">setState</code> 호출에도 리렌더링 최적화가 보장되지 않는다는 것이다.</p></div><style data-emotion="css 13ttz15">.css-13ttz15{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;width:100%;margin-top:80px;}</style><div class="css-13ttz15 e1vyg2he6"><style data-emotion="css 1wb75xr">.css-1wb75xr{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;gap:16px;width:100%;}</style><div class="css-1wb75xr e1vyg2he5"><a href="/?tag=React"><style data-emotion="css 1e6zh8g">.css-1e6zh8g{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;height:28px;border-radius:100px;padding:0px 16px;font-size:14px;font-weight:400;color:#2A2E36;background-color:#EFF2F8;}.css-1e6zh8g:hover{background-color:#DDDFEA;}</style><div class="css-1e6zh8g e1vyg2he4">React</div></a><a href="/?tag=state"><div class="css-1e6zh8g e1vyg2he4">state</div></a></div><style data-emotion="css 1ud7xm8">.css-1ud7xm8{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;gap:16px;width:100%;padding-top:60px;padding-bottom:60px;border-bottom:2px solid #EFF2F8;}</style><div class="css-1ud7xm8 e1vyg2he0"><div>출처</div><style data-emotion="css 8hyr44">.css-8hyr44{-webkit-text-decoration:underline;text-decoration:underline;color:#4087F2;-webkit-transition:color 0.3s ease-in-out;transition:color 0.3s ease-in-out;}.css-8hyr44:hover{color:#7EAFF9;}</style><a href="https://jser.dev/posts/react-18-early-bailout" class="css-8hyr44 e1vyg2he1">JSer.dev naver D2</a><a href="https://www.youtube.com/watch?v=3XaXGZk3y5A" class="css-8hyr44 e1vyg2he1">Boaz youtube</a><a href="https://bumkeyy.tistory.com/1" class="css-8hyr44 e1vyg2he1">bumkeyy</a><a href="https://tnghgks.tistory.com/1" class="css-8hyr44 e1vyg2he1">tnghgks</a></div><style data-emotion="css zbdijn">.css-zbdijn{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;width:100%;margin-top:60px;}</style><div class="css-zbdijn e1vyg2he3"><nav><style data-emotion="css k693oz">.css-k693oz{display:inline-block;padding:10px 12px;border-radius:6px;font-size:14px;font-weight:500;background-color:#FFECEA;color:#FF5F4D;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}.css-k693oz span{font-weight:400;font-size:12px;color:#FF5F4D;}.css-k693oz:hover{-webkit-transform:scale(1.025);-moz-transform:scale(1.025);-ms-transform:scale(1.025);transform:scale(1.025);}.css-k693oz:active{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}</style><a href="/tech/2023-10-08-Atomic-패턴-적용에-실패한-이유/" class="css-k693oz e1vyg2he2"><span>&lt;<!-- -->  </span>Atomic 패턴 적용</a></nav><nav><a href="/tech/2023-11-21-Mixed-Content/" class="css-k693oz e1vyg2he2">Mixed Content<span>  <!-- -->&gt;</span></a></nav></div></div><style data-emotion="css ubjqvb">.css-ubjqvb{width:100%;margin-top:128px;}.css-ubjqvb .utterances{max-width:960px;width:100%;}</style><div class="css-ubjqvb e80i37e0"></div></div></main><style data-emotion="css rd2sj">.css-rd2sj{width:100%;padding:20px 16px;height:80px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;background-color:#fafafa;}</style><footer class="css-rd2sj e15hdkgr1"><div><style data-emotion="css 1g5fyw6">.css-1g5fyw6{font-size:12px;font-weight:400;line-height:20px;color:#505050;}@media (max-width: 768px){.css-1g5fyw6{font-size:12px;font-weight:400;line-height:17px;}}</style><p style="margin-bottom:2px" class="css-1g5fyw6 eblbwfd1">Copyright ©gparkkii All rights reserved.</p><style data-emotion="css 1fi90lw">.css-1fi90lw{font-size:12px;font-weight:400;line-height:20px;color:#757575;}@media (max-width: 768px){.css-1fi90lw{font-size:12px;font-weight:400;line-height:17px;}}</style><p class="css-1fi90lw eblbwfd1">2024 | built with gatsby | Developed by gparkkii, JeongSeulho</p></div><a href="https://github.com/Jeongseulho" target="_blank" rel="noopener norefferer"><style data-emotion="css tcsx9g">.css-tcsx9g{opacity:0.25;}.css-tcsx9g:hover{opacity:1;}</style><div class="css-tcsx9g e15hdkgr0"><style data-emotion="css 13tvgi6">.css-13tvgi6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;object-fit:contain;}.css-13tvgi6 svg>path{fill:#353535;stroke:#fff!important;stroke-width:3.5%!important;}</style><div style="width:32px;height:32px" class="css-13tvgi6 e1n32jks0"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" font-size="32px"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></div></div></a></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/tech/2023-11-14-React-early-bailout/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
