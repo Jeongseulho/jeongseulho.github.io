@@ -7,7 +7,7 @@ thumbnail: ./image.png
 update: true
 ---
 
-## 1. is
+## 1 is
 `is` 키워드는 타입 가드로 한정된 범위 내의 모든 변수에 대하여 타입을 적용할 수 있는 키워드이며, 함수의 반환값이 `boolean`인 경우 함수 선언의 반환 타입 자리에 사용된다.  
 
 ```ts
@@ -23,7 +23,7 @@ function example(foo: any) {
 }
 ```
 
-## 2. 제네릭
+## 2 제네릭
 
 ### 2.1 제네릭 extends
 클래스의 `extends` 키워드는 상속을 의미하지만, 제네릭에서는 제네릭 타입의 범위를 제한하는 역할을 한다.  
@@ -64,7 +64,7 @@ class Queue<Q> extends MyArray<Q> {
 }
 ```
 
-## 3. 조건부 타입
+## 3 조건부 타입
 `extends`와 `?`를 사용하여 삼항 연산자를 사용한 것과 같은 효과를 낼 수 있다.  
 
 ```ts
@@ -183,7 +183,7 @@ type T30 = Bar<{ a: (x: string) => void, b: (x: string) => void }>;  // string
 type T31 = Bar<{ a: (x: string) => void, b: (x: number) => void }>;  // string & number
 ```
 
-## 4. satisfies
+## 4 satisfies
 `satisfies`는 객체의 타입이 더 정확하고 좁은 범위로 추론되도록 하는 키워드이다.  
 
 ```ts

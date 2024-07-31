@@ -12,7 +12,7 @@ update: true
 실습코치로서 `Git` 관련 코칭을 위해 프로젝트를 진행하며 자주 사용하거나 중요한, 또는 유용한 `Git` 명령어들을 정리해보았다.
 
 
-## 1. 이전 커밋 수정하기
+## 1 이전 커밋 수정하기
 > 이전의 커밋을 수정할 때 주의할 점은 `push`한 커밋에 대해서는 수정을 조심해야 한다.  
 > 협업을 진행하고 있는 다른 사람들이 이미 수정하기 전의 커밋을 `pull`한 상태에서 `remote`의 커밋이 수정되면 충돌이 발생할 수 있기 때문이다.  
   
@@ -52,7 +52,7 @@ git rebase --continue
 를 통해 `rebase`를 계속 진행한다.  
 
 또한, `edit`이외에도 `squash`를 통해 여러 커밋을 하나로 합치는 등 다양한 작업을 할 수 있다.  
-## 2. 버전 되돌리기
+## 2 버전 되돌리기
 
 > `git reset`은 위에서 언급한 것과 같이 `push`한 커밋에 대해서는 조심해야 한다.
   
@@ -78,7 +78,7 @@ git revert [Commit ID1]..[Commit ID3]
 git revert --no-commit [Commit ID]
 ```  
 
-## 3. 커밋하지 않고 임시 저장하기
+## 3 커밋하지 않고 임시 저장하기
 `git stash`를 통해 워킹 디렉토리와 스테이지에 있는 변경사항을 임시로 저장할 수 있다, 주로 개발 중에 급하게 다른 브랜치로 이동하여 작업을 해야 할 때 사용한다.
 ```bash
 // 스택에 임시 저장
@@ -87,7 +87,7 @@ git stash
 // 불러오면서 스택에서 삭제
 git stash pop
 ```
-## 4. rebase로 커밋 히스토리 정리하기
+## 4 rebase로 커밋 히스토리 정리하기
 브랜치가 많아지면 히스토리가 복잡해지기 마련이다, 이때 `-rebase`를 통해 히스토리를 정리할 수 있다.  
 ```bash
 git pull –rebase upstream [branch name]
@@ -100,12 +100,12 @@ git pull –rebase upstream [branch name]
 ![image](https://github.com/Jeongseulho/Jeongseulho/assets/110578739/4c1ac728-138d-4621-9483-48abb752cedf)
 
 
-## 5. 원격에서 삭제된 브랜치를 로컬에서 삭제하기
+## 5 원격에서 삭제된 브랜치를 로컬에서 삭제하기
 ```bash
 git fetch --prune
 ```
 
-## 6. 이미 원격에 올라간 파일을 뒤늦게 .gitignore에 추가했을 때
+## 6 이미 원격에 올라간 파일을 뒤늦게 .gitignore에 추가했을 때
 
 ```bash
 git rm -r --cached .

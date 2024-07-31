@@ -15,7 +15,7 @@ update: true
 
 위처럼 통일된 프로토콜을 통해 데이터 소비자가 데이터 공급자의 내부 구조를 알 필요 없이 다양한 데이터 공급자를 사용할 수 있다.  
 
-## 1. Iteration Protocol
+## 1 Iteration Protocol
 `Iteration Protocol`은 `Iterable Protocol`과 `Iterator Protocol`로 구성된다.  
 
 ### 1.1 Iterable Protocol과 Iterable
@@ -142,7 +142,7 @@ let 나만의이터러블 = {
 };
 ```
 
-## 2. Generator
+## 2 Generator
 `Generator`는 `Generator Function`에서 반환되는 객체이며 `well-formed Iterable`으로도 평가된다.  
 `Generator Function`은 `well-formed Iterable`을 쉽게 만들 수 있도록 해준다.  
 `Generator Function`은 `function*`로 선언하며 `yield` 키워드를 사용하여 값을 반환한다.

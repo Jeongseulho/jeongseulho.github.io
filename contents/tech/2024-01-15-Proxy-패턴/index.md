@@ -13,7 +13,7 @@ sources_link: [https://gist.github.com/superLipbalm/dea43695b66897d1b4d246b402aa
 ## 0. 들어가며 
 JS에서 `Proxy` 객체와 사용법에 대해 정리
 
-## 1. JS Proxy 객체
+## 1 JS Proxy 객체
 JS에서 `Proxy` 객체는 다음과 같이 사용한다
 ```js
 const proxy = new Proxy(target, handler);
@@ -58,7 +58,7 @@ console.log(proxy.message);
 | ownKeys                | Object.getOwnPropertyNames, Object.getOwnPropertySymbols            |
 
 
-## 2. 리액트에서 사용 예시
+## 2 리액트에서 사용 예시
 
 ### (1) 접근 권한 검증 및 제어
 유저 데이터를 fetch하는 함수 실행 시 `Proxy` 객체를 이용하여 접근 권한을 검증하고 제어할 수 있다.
@@ -131,5 +131,5 @@ const createExpensiveFunction = () => {
 };
 ```
 
-## 3. 마치며
+## 3 마치며
 데코레이터를 사용하는 것과 비슷한 느낌이다, `Typescript`에서 제공하는 데코레이터를 리액트에서 활용을 못해서 아쉬웠는데 `Proxy`를 이용하면 데코레이터와 비슷한 기능을 구현할 수 있을 것 같다.

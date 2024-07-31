@@ -8,7 +8,7 @@ update: true
 ---
 
 
-## 1. 메모리 힙, 콜 스택 변수 저장 구조
+## 1 메모리 힙, 콜 스택 변수 저장 구조
 ![image](https://github.com/Jeongseulho/Jeongseulho/assets/110578739/a1bd5e85-c96e-43b3-8609-a3d5b2b12425)
 
 ### (1) 원시 타입
@@ -22,7 +22,7 @@ update: true
 - 변수 `b, c, d`에는 메모리 힙의 주소값이 저장된 콜 스택의 메모리 주소값이 저장
 - 마찬가지 변수 식별자 `b, c, d`는 콜스택 상의 실행 컨텍스트의 렉시컬 환경이라는 곳에 저장
 
-## 2. 원시 타입
+## 2 원시 타입
 
 ### (1) 원시 타입 변수 생성
 ![image](https://github.com/Jeongseulho/Jeongseulho/assets/110578739/29f55ff8-32c4-4dd0-91fc-26a52b1f8fa1)

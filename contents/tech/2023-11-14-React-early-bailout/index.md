@@ -36,7 +36,7 @@ sources_link: [https://jser.dev/posts/react-18-early-bailout, https://www.youtub
 이 코드의 결과는 분명히 `state 0`이다. 분명히 리렌더링이 일어나지 않는다. 내가 생각한 것처럼 `setState(0)`이 호출되어도 `0` => `0`으로 상태가 변하지 않기 때문이다, 근데 왜 처음 문제의 코드는 리렌더링이 일어나는 것일까?  
 
 
-## 1. early bailout 조건
+## 1 early bailout 조건
 `setState`에서 이전 상태와 다음 상태를 비교하여 상태가 변하지 않으면 리렌더링을 하지 않도록 최적화 하는 것을 `early bailout`이라고 한다. `setState`를 정의하는 소스코드를 확인해 보자.
 
 ```tsx
@@ -91,7 +91,7 @@ if (
 이렇게 3가지 조건이 모두 만족해야 `early bailout`이 발생한다.  
 `fiber`,`alternate`와 `lanes`, `NoLanes`은 무엇인지 알아보자.
 
-## 2. Virtual DOM
+## 2 Virtual DOM
 `fiber, alternate, lanes, NoLanes` 모두 `Virtual DOM`의 구조와 관련있는 용어이다.
 ### (1) Virtual DOM의 구조
 위 코드에서 `fiber`란 `Virtual DOM`을 이루는 각 노드를 지칭한다, 또한 `Virtual DOM`은 더블 버퍼링 구조로 2가지의 트리가 존재하는데, `current V DOM`과 `workInProgress V DOM`이다.
@@ -130,7 +130,7 @@ if (
 - lanes
   - 다양한 업데이트의 우선 순위를 관리하는 개념
 
-## 3. lanes 코드 해석
+## 3 lanes 코드 해석
 위 개념을 기반으로 조건문을 해석해보면  
 
 1. `fiber.lanes === NoLanes`이란 현재 `fiber`에서 업데이트할 내용이 없다는 것을 의미한다.
@@ -218,7 +218,7 @@ function beginWork(
 이제 처음 의문이 생긴 코드를 해석해보자.
 
 
-## 3. 문제 코드 해석
+## 3 문제 코드 해석
 
 ### (1) early bailout이 발생하는 코드
 ```jsx
@@ -270,6 +270,6 @@ function beginWork(
 5번에서 `setState(1)`이 호출되어 1 => 1로 상태가 변하지 않았지만 `early bailout`으로 빠지지 않았고 6번에서 `render phase`가 진행되면서 컴포넌트가 다시 실행되는 것이다.
 
 
-## 4. 마치며
+## 4 마치며
 굉장히 Low한 레벨의 내용이라 이해하는데 굉장히 오래걸리고 어려웠다.  
 중요한 점은 `state`가 변하지 않는 `setState` 호출에도 리렌더링 최적화가 보장되지 않는다는 것이다.
