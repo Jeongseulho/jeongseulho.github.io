@@ -2,7 +2,7 @@
 date: 2024-08-01
 title: Debounce와 Throttle
 tags: [JS, React, 성능]
-summary: TS의 유틸리티 타입 종류와 사용법
+summary: Debounce와 Throttle의 개념과 구현, 사용 사례
 thumbnail: ./image.png
 update: true
 sources: [nx006님의 tistory, jiynn_12님의 velog, 별코딩님의 youtube, webclub님의 tistory]
