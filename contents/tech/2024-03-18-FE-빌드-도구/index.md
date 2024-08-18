@@ -1,7 +1,7 @@
 ---
 date: 2024-03-18
 title: FE 빌드 도구
-tags: [FE]
+tags: [FE Build]
 summary: Webpack, SWC, Babel 등 빌드 도구에 대해 정리
 thumbnail: ./image.png
 update: true

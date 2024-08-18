@@ -1,7 +1,7 @@
 ---
 date: 2023-10-01
 title: React Suspense
-tags: [React]
+tags: [React, React Suspense]
 summary: Suspense를 사용한 이유와 사용하면서 겪었던 문제점, 해결 방법을 정리해보았다.
 thumbnail: ./image.png
 update: true

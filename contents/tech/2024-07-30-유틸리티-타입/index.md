@@ -1,7 +1,7 @@
 ---
 date: 2024-07-30
 title: 유틸리티 타입
-tags: [TS]
+tags: [TS, TS Utility]
 summary: TS의 유틸리티 타입 종류와 사용법
 thumbnail: ./image.png
 update: true

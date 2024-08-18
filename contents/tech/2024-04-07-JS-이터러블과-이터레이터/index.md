@@ -1,7 +1,7 @@
 ---
 date: 2024-04-07
 title: JS 이터러블과 이터레이터
-tags: [JS]
+tags: [JS, Iterable, Iterator, Generator]
 summary: es6 이후의 JS 이터러블과 이터레이터, 제네레이터의 등장 배경과 사용법
 thumbnail: ./image.png
 update: true

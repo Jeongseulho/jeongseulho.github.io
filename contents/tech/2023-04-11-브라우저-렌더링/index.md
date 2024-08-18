@@ -1,7 +1,7 @@
 ---
 date: 2023-04-11
 title: 브라우저 렌더링
-tags: [브라우저]
+tags: [브라우저 렌더링]
 summary: 브라우저 렌더링 과정 및 최적화 방법
 thumbnail: ./image.png
 update: true

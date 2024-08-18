@@ -1,7 +1,7 @@
 ---
 date: 2023-04-18
 title: JS의 비동기
-tags: [JS]
+tags: [JS, 비동기]
 summary: JS의 비동기 처리 방식인 콜백, Promise, async/await에 대해 정리
 thumbnail: ./image.png
 update: true

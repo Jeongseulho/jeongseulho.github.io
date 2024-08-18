@@ -1,7 +1,7 @@
 ---
 date: 2023-04-18
 title: JS의 Event Loop
-tags: [JS]
+tags: [JS, Event Loop]
 summary: 실제 코드를 통해 JS의 이벤트 루프의 동작 방식을 정리
 thumbnail: ./image.png
 update: true

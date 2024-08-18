@@ -1,7 +1,7 @@
 ---
 date: 2023-09-22
 title: 복잡한 객체의 상태 useReducer로 관리하기
-tags: [React, 상태 관리]
+tags: [React, React State]
 summary: 복잡한 객체의 상태를 useReducer로 관리하는 이유와 방법
 thumbnail: ./image.png
 update: true

@@ -1,7 +1,7 @@
 ---
 date: 2023-09-29
 title: React Query 도입 이유
-tags: [React, 상태 관리]
+tags: [React, React State]
 summary: 특화 프로젝트에 `React Query`를 사용하기로 결정한 이유
 thumbnail: ./image.png
 update: true

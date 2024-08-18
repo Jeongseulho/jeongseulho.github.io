@@ -1,7 +1,7 @@
 ---
 date: 2024-04-07
 title: 상황에따른 this 정리
-tags: [JS]
+tags: [JS, this]
 summary: this 바인딩 규칙과 우선순위, 화살표 함수, node.js와 브라우저 환경에서의 this 바인딩
 thumbnail: ./image.png
 update: true

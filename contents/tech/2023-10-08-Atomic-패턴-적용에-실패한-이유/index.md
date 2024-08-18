@@ -1,7 +1,7 @@
 ---
 date: 2023-10-08
 title: Atomic 패턴 적용
-tags: [React, React 패턴]
+tags: [React, 디자인 패턴]
 summary: ATOMIC 패턴을 적용하고 느낀 장단점
 thumbnail: ./image.png
 update: true

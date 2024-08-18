@@ -1,7 +1,7 @@
 ---
 date: 2023-04-25
 title: JS의 Prototype
-tags: [JS]
+tags: [JS, Prototype]
 summary: JS의 Prototype 객체의 개념과 활용
 thumbnail: ./image.png
 update: true

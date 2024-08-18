@@ -1,7 +1,7 @@
 ---
 date : 2023-04-07
 title : Git Branch 전략
-tags: [Git]
+tags: [Git, Branch 전략]
 summary: git-flow와 github-flow에 대해 정리
 thumbnail: ./image.jpeg
 update: true

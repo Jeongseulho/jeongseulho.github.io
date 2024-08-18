@@ -1,7 +1,7 @@
 ---
 date: 2023-04-18
 title: TS와 React의 SOLID
-tags: [TS, React, 디자인 패턴]
+tags: [TS, React, 디자인 패턴, 객체지향]
 summary: React에서 SOLID 원칙을 적용하는 방법
 thumbnail: ./image.png
 update: true

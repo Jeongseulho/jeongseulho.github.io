@@ -1,7 +1,7 @@
 ---
 date: 2024-04-02
 title: TS 데코레이터
-tags: [TS, Decorator]
+tags: [TS, TS Decorator]
 summary: TS 데코레이터의 구현과 사용 방법
 thumbnail: ./image.png
 update: true
