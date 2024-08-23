@@ -1,7 +1,7 @@
 ---
 date: 2023-11-21
 title: Mixed Content
-tags: [NextJs, https]
+tags: [NextJs, Https]
 summary: Mixed Content 에러의 원인과 해결 방법을 정리
 thumbnail: ./image.png
 update: true

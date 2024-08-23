@@ -1,7 +1,7 @@
 ---
 date: 2023-11-14
 title: React early bailout
-tags: [React, state]
+tags: [React, React State]
 summary: React의 상태 변화에 따른 렌더링 최적화인 early bailout의 조건과 과정을 정리
 thumbnail: ./image.png
 update: true

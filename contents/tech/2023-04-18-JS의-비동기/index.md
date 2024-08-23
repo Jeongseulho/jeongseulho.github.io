@@ -1,7 +1,7 @@
 ---
 date: 2023-04-18
 title: JS의 비동기
-tags: [JS]
+tags: [JS, 비동기]
 summary: JS의 비동기 처리 방식인 콜백, Promise, async/await에 대해 정리
 thumbnail: ./image.png
 update: true
@@ -97,9 +97,9 @@ getImage(file)
 - 즉 비동기처리를 위해 `Promise`객체를 반환하도록 만들고, 이때 `Promise` 생성시 비동기 처리를 수행할 콜백함수를 인자로 준다.
 - 반환된 `Promise`객체에 `then, catch, finally`를 사용해 콜백 함수를 대신 사용
 
-### 📖Promise statice method
+### 📖Promise static method
 
-#### ✒️Promise.resolve
+### ✒️Promise.resolve
 
 ```js
 const resolvedPromise = Promise.resolve([1, 2, 3]);
@@ -107,7 +107,8 @@ const resolvedPromise = Promise.resolve([1, 2, 3]);
 // const resolvedPromise = new Promise(resolve => resolve([1, 2, 3]));
 
 resolvedPromise.then(console.log); // [ 1, 2, 3 ]
-```
+```  
+
 
 ### ✒️Promise.reject
 
@@ -119,9 +120,10 @@ const rejectedPromise = new Promise((resolve, reject) =>
 );
 
 rejectedPromise.catch(console.log); // Error: Error!
-```
+```  
 
-#### ✒️Promise.all
+
+### ✒️Promise.all
 
 - 프로미스가 담긴 이터러블을 인자로 받고 모든 프로미스를 병렬로 처리, 모든 프로미스가 처리완료 까지 기다린 후 결과 반환, 모두 성공 OR 하나 이상 실패
 
@@ -165,9 +167,10 @@ Promise.all([
 ])
   .then(console.log) // [1, 2, 3]
   .catch(console.log);
-```
+```  
 
-#### ✒️Promise.race
+
+### ✒️Promise.race
 
 - `Promise.all`과 유사, 모두 성공한 경우에는 가장 먼저 처리된 프로미스의 `resolve`한 처리 결과를 `resolve`하는 새로운 `Promise` 반환
 
@@ -179,11 +182,12 @@ Promise.race([
 ])
   .then(console.log) // 3
   .catch(console.log);
-```
+```  
+
 
 - 프로미스 처리가 하나라도 실패하면 all과 동일
 
-#### ✒️Promise.allSettled
+- ✒️Promise.allSettled
 
 - 모든 프로미스가 처리되기를 기다렸다가 배열을 반환, 이 배열에는 모든 `Promise`들의 결과가 담김
 - 실패한 `Promise`가 포함되어도 에러로 빠지지 않고 `fulfilled`상태가 되면서 실패한 `Promise`는 실패정보를 담고 있음
@@ -195,8 +199,9 @@ Promise.race([
   - Animation Frames : 우선 순위 2등, requestAnimationFrame 등
   - Task Queue(MacroTask Queue) : 우선 순위 3등, setTimeout, setInterval 등
 - Promise의 콜백함수는 MicroTask Queue로 가며 이는 Task Queue(MacroTask Queue)보다 우선순위가 높아 먼저 콜스택으로 간다
+  
 
-#### ✒️예시
+### ✒️예시
 
 ```js
 console.log("Start!");

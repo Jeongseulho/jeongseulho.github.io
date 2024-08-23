@@ -1,7 +1,7 @@
 ---
 date: 2023-04-24
 title: 이벤트 전파
-tags: [JS]
+tags: [JS, 이벤트 전파]
 summary: 이벤트 캡처링, 버블링과 이를 활용한 이벤트 위임 방법을 정리
 thumbnail: ./image.png
 update: true

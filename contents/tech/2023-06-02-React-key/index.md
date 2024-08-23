@@ -1,7 +1,7 @@
 ---
 date: 2023-06-02
 title: React key
-tags: [React]
+tags: [React, Key Props]
 summary: React에서 key의 역할과 인덱스를 권장하지 않는 이유
 thumbnail: ./image.png
 update: true

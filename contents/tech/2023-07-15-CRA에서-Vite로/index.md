@@ -1,7 +1,7 @@
 ---
 date: 2023-07-15
 title: CRA에서 Vite로
-tags: [React]
+tags: [React, Vite]
 summary: Vite를 선택한 이유
 thumbnail: ./image.png
 update: true

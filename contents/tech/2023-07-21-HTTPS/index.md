@@ -1,7 +1,7 @@
 ---
 date: 2023-07-21
 title: HTTPS
-tags: [https, 네트워크]
+tags: [Https, 네트워크]
 summary: HTTPS이 어떻게 동작하여 보안을 강화하는지 정리
 thumbnail: ./image.png
 update: true

@@ -1,7 +1,7 @@
 ---
 date: 2023-08-20
 title: Context API 최적화
-tags: [React, 상태 관리]
+tags: [React, React State]
 summary: Context API에서 불필요한 렌더링이 발생하는 이유와 해결 방법을 정리
 thumbnail: ./image.png
 update: true

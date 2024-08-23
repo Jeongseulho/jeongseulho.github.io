@@ -1,7 +1,7 @@
 ---
 date: 2023-08-31
 title: Zustand 도입 이유
-tags: [React, 상태 관리]
+tags: [React, React State]
 summary: Zustand를 사용하기로 결정한 이유
 thumbnail: ./image.png
 update: true

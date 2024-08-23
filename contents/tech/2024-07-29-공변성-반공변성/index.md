@@ -1,7 +1,7 @@
 ---
 date : 2024-07-29
 title : 공변성, 반공변성
-tags: [TS]
+tags: [TS, 공변성, 반공변성]
 summary: TS의 함수 파라미터 타입과 리턴 타입에 대한 공변성, 반공변성에 대해 정리
 thumbnail: ./image.png
 update: true

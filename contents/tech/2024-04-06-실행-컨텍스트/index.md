@@ -1,7 +1,7 @@
 ---
 date: 2024-04-06
 title: 실행 컨텍스트
-tags: [JS]
+tags: [JS, 실행 컨텍스트]
 summary: JavaScript의 실행 컨텍스트
 thumbnail: ./image.png
 update: true

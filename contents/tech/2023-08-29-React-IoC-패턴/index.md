@@ -1,7 +1,7 @@
 ---
 date: 2023-08-29
 title: React IoC 패턴
-tags: [React, React 패턴]
+tags: [React, 디자인 패턴]
 summary: 확장성을 고려한 컴포넌트의 IoC 패턴들을 나열하고 각 패턴의 장단점을 정리
 thumbnail: ./image.png
 update: true
