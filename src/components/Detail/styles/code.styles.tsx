@@ -15,6 +15,12 @@ export const MarkdownRenderer = styled.div`
   font-weight: 400;
   color: ${({ theme }) => theme.colors.bluegray[600]};
 
+  img {
+    width: 100%;
+    height: auto; /* 비율 유지 */
+    max-width: 100%;
+  }
+
   .responsive-image {
     width: 100%;
   }
@@ -248,6 +254,8 @@ export const MarkdownRenderer = styled.div`
       monospace;
     font-weight: 500;
     font-size: 15px;
+    white-space: normal;
+    word-break: break-word;
   }
 
   pre[class*='language-']::-webkit-scrollbar {

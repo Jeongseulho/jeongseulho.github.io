@@ -63,7 +63,7 @@ const ThumbnailBox = styled.div`
 const ThumbnailImage = styled(GatsbyImage)`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 `;
 
