@@ -2802,6 +2802,11 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: st
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
 
+type LectureQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type LectureQueryQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null, readonly description: string | null, readonly siteUrl: string | null } | null } | null, readonly allMarkdownRemark: { readonly group: ReadonlyArray<{ readonly fieldValue: string | null, readonly totalCount: number, readonly nodes: ReadonlyArray<{ readonly id: string, readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null, readonly date: string | null, readonly thumbnail: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null }> }> } };
+
 type postContentQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 

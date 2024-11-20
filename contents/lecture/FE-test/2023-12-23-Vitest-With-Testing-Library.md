@@ -1,5 +1,6 @@
 ---
 title: Vitest With Testing Library
+categories: [프론트엔드 테스트]
 date: 2023-12-23 01:00:00 +0900
 tags: [FE, Test]
 ---
