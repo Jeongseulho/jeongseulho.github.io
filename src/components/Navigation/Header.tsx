@@ -92,6 +92,7 @@ const Logo = styled.div`
 `;
 
 const DesktopMenu = ({ path }: { path: string }) => {
+  console.log(path);
   return (
     <>
       <NavMenuBox>

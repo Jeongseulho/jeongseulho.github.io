@@ -7,6 +7,7 @@ import CommentWidget from 'components/Detail/CommentWidget';
 import ContentFooter from 'components/Detail/ContentFooter';
 import { PostPageItemType, PageContextType } from 'types/Post.types';
 import { graphql } from 'gatsby';
+import { PATH } from 'routes/path';
 
 type PostTemplateProps = {
   path: string;
@@ -51,7 +52,7 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
 
   return (
     <BaseLayout
-      path={'/'}
+      path={PATH.index}
       meta={{
         title,
         description: summary,

@@ -1,6 +1,6 @@
 ---
 title: GitHub Action으로 테스트 자동화
-categories: [프론트엔드 테스트]s
+categories: [프론트엔드 테스트]
 date: 2024-01-09 02:00:00 +0900
 tags: [FE, Test]
 ---

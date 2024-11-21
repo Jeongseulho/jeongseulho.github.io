@@ -4,9 +4,9 @@ import { PATH } from '../routes/path';
 import { Guidance2, Summary } from '../styles/typography';
 import styled from '@emotion/styled';
 import { theme } from '../theme';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import NoContent from '../components/Common/NoContent';
-
+import LectureCard from '../components/Lecture/LectureCard';
 const LectureWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -38,50 +38,6 @@ const LectureGrid = styled.div`
   @media (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
   }
-`;
-
-const CategoryCard = styled(Link)`
-  display: block;
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-  text-decoration: none;
-  color: inherit;
-
-  &:hover {
-    transform: translateY(-4px);
-  }
-`;
-
-const ThumbnailWrapper = styled.div`
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; // 16:9 비율
-  background: ${({ theme }) => theme.colors.dark[50]};
-`;
-
-const Thumbnail = styled.img`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
-
-const CardContent = styled.div`
-  padding: 20px;
-`;
-
-const CategoryTitle = styled.h2`
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 8px;
-`;
-
-const PostCount = styled.span`
-  font-size: 14px;
-  color: ${({ theme }) => theme.colors.dark[100]};
 `;
 
 type LecturePageProps = {
@@ -141,31 +97,9 @@ const LecturePage = ({
         </LectureHead>
         {group.length > 0 ? (
           <LectureGrid>
-            {group.map(category => {
-              const thumbnail = category.nodes[0]?.frontmatter.thumbnail;
-              return (
-                <CategoryCard
-                  key={category.fieldValue}
-                  to={`/lecture/${category.fieldValue.toLowerCase()}`}
-                >
-                  <ThumbnailWrapper>
-                    {thumbnail && (
-                      <Thumbnail
-                        src={
-                          thumbnail.childImageSharp.gatsbyImageData.images
-                            .fallback.src
-                        }
-                        alt={category.fieldValue}
-                      />
-                    )}
-                  </ThumbnailWrapper>
-                  <CardContent>
-                    <CategoryTitle>{category.fieldValue}</CategoryTitle>
-                    <PostCount>{category.totalCount}개의 포스트</PostCount>
-                  </CardContent>
-                </CategoryCard>
-              );
-            })}
+            {group.map(category => (
+              <LectureCard key={category.fieldValue} category={category} />
+            ))}
           </LectureGrid>
         ) : (
           <NoContent />

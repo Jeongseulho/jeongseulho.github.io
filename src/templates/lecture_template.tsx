@@ -2,80 +2,77 @@ import React, { FunctionComponent } from 'react';
 import BaseLayout from 'layout/BaseLayout';
 import PostLayout from 'layout/PostLayout';
 import ContentHead from 'components/Detail/ContentHead';
+import ContentBody from 'components/Detail/ContentBody';
 import CommentWidget from 'components/Detail/CommentWidget';
-import { MarkdownRenderer } from 'components/Detail/styles/code.styles';
-import { DiaryPageItemType } from 'types/Post.types';
+import ContentFooter from 'components/Detail/ContentFooter';
+import { PostPageItemType, PageContextType } from 'types/Post.types';
 import { graphql } from 'gatsby';
-import { PATH } from 'routes/path';
-type DiaryTemplateProps = {
+import { PATH } from '../routes/path';
+type LectureTemplateProps = {
   path: string;
   data: {
     allMarkdownRemark: {
-      edges: DiaryPageItemType[];
-    };
-    file: {
-      publicURL: string;
+      edges: PostPageItemType[];
     };
   };
-  pageContext: unknown;
+  pageContext: {
+    slug: string;
+    previous: PageContextType | null;
+    next: PageContextType | null;
+  };
   location: {
     href: string;
   };
 };
 
-const DiaryTemplate: FunctionComponent<DiaryTemplateProps> = function ({
+const LectureTemplate: FunctionComponent<LectureTemplateProps> = function ({
   data,
+  pageContext,
   location,
-}: DiaryTemplateProps) {
+}: LectureTemplateProps) {
+  const { previous, next } = pageContext;
   const {
     node: {
       html,
-      frontmatter: { title, summary, date },
+      frontmatter: { title, date, tags },
     },
   } = data.allMarkdownRemark.edges[0];
 
   return (
     <BaseLayout
-      path={PATH.diary}
+      path={PATH.lecture}
       meta={{
         title,
-        description: summary,
-        image: data.file.publicURL,
+        description: title,
         url: location.href,
       }}
     >
       <PostLayout>
         <ContentHead title={title} date={date} />
-        <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />
+        <ContentBody html={html} />
+        <ContentFooter previous={previous} next={next} tags={tags} />
         <CommentWidget />
       </PostLayout>
     </BaseLayout>
   );
 };
 
-export default DiaryTemplate;
+export default LectureTemplate;
 
 export const queryMarkdownDataBySlug = graphql`
-  query queryMarkdownDataBySlug($slug: String) {
+  query queryLectureMarkdownDataBySlug($slug: String) {
     allMarkdownRemark(filter: { fields: { slug: { eq: $slug } } }) {
       edges {
         node {
           html
+          tableOfContents
           frontmatter {
             title
-            summary
             date(formatString: "YYYY년 MM월 DD일")
-            index
-            update
+            tags
           }
         }
       }
-    }
-    file(name: { eq: "profile-image" }) {
-      childImageSharp {
-        gatsbyImageData(width: 120, height: 120)
-      }
-      publicURL
     }
   }
 `;
