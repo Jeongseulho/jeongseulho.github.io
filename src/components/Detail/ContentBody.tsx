@@ -6,7 +6,7 @@ import { MarkdownRenderer } from './styles/code.styles';
 
 interface ContentBodyProps {
   html: string;
-  thumbnail: IGatsbyImageData;
+  thumbnail?: IGatsbyImageData;
 }
 
 const ImageWrapper = styled.div`
@@ -25,16 +25,18 @@ const ContentBody = ({ thumbnail, html }: ContentBodyProps) => {
   return (
     <>
       <ImageWrapper>
-        <GatsbyImage
-          style={{
-            height: '328px',
-            objectFit: 'contain',
-            borderRadius: '20px',
-          }}
-          loading="lazy"
-          image={thumbnail}
-          alt="thumbnail"
-        />
+        {thumbnail && (
+          <GatsbyImage
+            style={{
+              height: '328px',
+              objectFit: 'contain',
+              borderRadius: '20px',
+            }}
+            loading="lazy"
+            image={thumbnail}
+            alt="thumbnail"
+          />
+        )}
       </ImageWrapper>
       <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />
     </>

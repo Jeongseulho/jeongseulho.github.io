@@ -92,6 +92,7 @@ const Logo = styled.div`
 `;
 
 const DesktopMenu = ({ path }: { path: string }) => {
+  console.log(path);
   return (
     <>
       <NavMenuBox>
@@ -101,9 +102,9 @@ const DesktopMenu = ({ path }: { path: string }) => {
         <Link to={PATH.diary}>
           <NavMenu title="Diary" active={path === PATH.diary} />
         </Link>
-        <Tooltip tip="개발중">
-          <NavMenu title="Lecture" disabled={true} active={false} />
-        </Tooltip>
+        <Link to={PATH.lecture}>
+          <NavMenu title="Lecture" active={path === PATH.lecture} />
+        </Link>
         <Tooltip tip="개발중">
           <NavMenu title="About Me" disabled={true} active={false} />
         </Tooltip>

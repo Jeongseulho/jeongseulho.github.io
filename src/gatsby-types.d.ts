@@ -2802,10 +2802,29 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: st
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
 
+type LectureListQueryQueryVariables = Exact<{
+  category: InputMaybe<Scalars['String']>;
+}>;
+
+
+type LectureListQueryQuery = { readonly site: { readonly siteMetadata: { readonly siteUrl: string | null } | null } | null, readonly allMarkdownRemark: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null, readonly date: string | null } | null }> } };
+
+type LectureQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type LectureQueryQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null, readonly description: string | null, readonly siteUrl: string | null } | null } | null, readonly allMarkdownRemark: { readonly group: ReadonlyArray<{ readonly fieldValue: string | null, readonly totalCount: number, readonly nodes: ReadonlyArray<{ readonly id: string, readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null, readonly date: string | null, readonly thumbnail: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null }> }> } };
+
 type postContentQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type postContentQueryQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null, readonly description: string | null, readonly siteUrl: string | null } | null } | null, readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly update: boolean | null, readonly title: string | null, readonly summary: string | null, readonly date: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly thumbnail: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } }> }, readonly file: { readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null };
+
+type queryLectureMarkdownDataBySlugQueryVariables = Exact<{
+  slug: InputMaybe<Scalars['String']>;
+}>;
+
+
+type queryLectureMarkdownDataBySlugQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly tableOfContents: string | null, readonly frontmatter: { readonly title: string | null, readonly date: string | null, readonly tags: ReadonlyArray<string | null> | null } | null } }> } };
 
 type queryMarkdownDataBySlugQueryVariables = Exact<{
   slug: InputMaybe<Scalars['String']>;

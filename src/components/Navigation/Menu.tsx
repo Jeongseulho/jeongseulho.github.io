@@ -71,7 +71,7 @@ const Menu = ({ index, title, active, disabled }: MenuProps) => {
             active ? theme.colors.primary.default : theme.colors.light[400]
           }
         >
-          0{index}.
+          {index}.
         </Caption>
         <StyledMenu active={active} disabled={disabled}>
           {title}

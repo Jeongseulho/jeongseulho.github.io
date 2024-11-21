@@ -63,6 +63,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               }
               frontmatter {
                 tags
+                categories
                 update
                 title
               }
@@ -80,7 +81,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       );
 
       const posts = result.data.allMarkdownRemark.edges.filter(
-        ({ node }) => node.frontmatter.update && node.frontmatter.tags !== null,
+        ({ node }) =>
+          node.frontmatter.update &&
+          (node.frontmatter.tags !== null ||
+            node.frontmatter.categories !== null),
       );
 
       // Page Generating Function
@@ -177,5 +181,94 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       return;
     });
 
-  return Promise.all([queryPostMarkdownData, queryDiaryMarkdownData]);
+  const queryLectureMarkdownData = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: [
+            { frontmatter: { date: DESC } }
+            { frontmatter: { title: ASC } }
+          ]
+          filter: { fields: { slug: { regex: "/lecture/.+/.+/" } } }
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                categories
+                title
+                date
+                tags
+              }
+            }
+          }
+        }
+      }
+    `,
+  )
+    .then(result => {
+      const LectureTemplateComponent = path.resolve(
+        __dirname,
+        'src/templates/lecture_template.tsx',
+      );
+
+      const lecturePosts = result.data.allMarkdownRemark.edges;
+
+      const generateLecturePage = (
+        {
+          node: {
+            fields: { slug },
+          },
+        },
+        index,
+      ) => {
+        const previous =
+          index === lecturePosts.length - 1
+            ? null
+            : lecturePosts[index + 1].node;
+        const next = index === 0 ? null : lecturePosts[index - 1].node;
+        const pageOptions = {
+          path: slug,
+          component: LectureTemplateComponent,
+          context: { slug, previous, next },
+        };
+
+        createPage(pageOptions);
+      };
+
+      lecturePosts.forEach(generateLecturePage);
+    })
+    .catch(error => {
+      reporter.panicOnBuild(`Error while running create lecture page query`);
+      return;
+    });
+
+  // 카테고리별 강의 목록 페이지 생성
+  const result = await graphql(`
+    {
+      allMarkdownRemark(filter: { fields: { slug: { regex: "/lecture/" } } }) {
+        group(field: { frontmatter: { categories: SELECT } }) {
+          fieldValue
+        }
+      }
+    }
+  `);
+
+  result.data.allMarkdownRemark.group.forEach(({ fieldValue }) => {
+    createPage({
+      path: `/lecture/${fieldValue.toLowerCase()}`,
+      component: path.resolve('./src/templates/lecture-list.tsx'),
+      context: {
+        category: fieldValue,
+      },
+    });
+  });
+
+  return Promise.all([
+    queryPostMarkdownData,
+    queryDiaryMarkdownData,
+    queryLectureMarkdownData,
+  ]);
 };
