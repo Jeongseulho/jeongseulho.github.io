@@ -813,7 +813,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <p><code class="language-text">is</code> 키워드는 타입 가드로 한정된 범위 내의 모든 변수에 대하여 타입을 적용할 수 있는 키워드이며, 함수의 반환값이 <code class="language-text">boolean</code>인 경우 함수 선언의 반환 타입 자리에 사용된다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="2731266868381099000"
+              data-toaster-id="59508460483434770000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -827,7 +827,7 @@ function example(foo: any) {
     // 이 영역에서 foo는 string 타입으로 추론된다.
     console.log(foo.length);
   }
-}`, `2731266868381099000`)"
+}`, `59508460483434770000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -851,7 +851,7 @@ function example(foo: any) {
 <p>클래스의 <code class="language-text">extends</code> 키워드는 상속을 의미하지만, 제네릭에서는 제네릭 타입의 범위를 제한하는 역할을 한다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="9098160317750770000"
+              data-toaster-id="18367912089911198000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -861,7 +861,7 @@ function example(foo: any) {
 // 제네릭에 적용될 타입에 number | string 만 허용
 function identity<T extends numOrStr>(p1: T): T {
    return p1;
-}`, `9098160317750770000`)"
+}`, `18367912089911198000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -879,7 +879,7 @@ function identity<T extends numOrStr>(p1: T): T {
 <h3 id="22-제네릭-클래스" style="position:relative;"><a href="#22-%EC%A0%9C%EB%84%A4%EB%A6%AD-%ED%81%B4%EB%9E%98%EC%8A%A4" aria-label="22 제네릭 클래스 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.2 제네릭 클래스</h3>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="39450817801310280000"
+              data-toaster-id="88038555821236520000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -905,7 +905,7 @@ class Queue<Q> extends MyArray<Q> {
    poll() {
       return this.items.shift();
    }
-}`, `39450817801310280000`)"
+}`, `88038555821236520000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -940,7 +940,7 @@ class Queue<Q> extends MyArray<Q> {
 <p><code class="language-text">extends</code>와 <code class="language-text">?</code>를 사용하여 삼항 연산자를 사용한 것과 같은 효과를 낼 수 있다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="75989421514664660000"
+              data-toaster-id="92956830729461370000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -952,7 +952,7 @@ class Queue<Q> extends MyArray<Q> {
 type IsStringType<T> = T extends string ? string[] : number[];
 
 type T1 = IsStringType<string>; // type T1 = string[]
-type T2 = IsStringType<number>; // type T2 = number[]`, `75989421514664660000`)"
+type T2 = IsStringType<number>; // type T2 = number[]`, `92956830729461370000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -971,7 +971,7 @@ type T2 = IsStringType<number>; // type T2 = number[]`, `75989421514664660000`)"
 <span class="token keyword">type</span> <span class="token class-name"><span class="token constant">T2</span></span> <span class="token operator">=</span> IsStringType<span class="token operator">&lt;</span><span class="token builtin">number</span><span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment">// type T2 = number[]</span></code></pre></div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="14894515291785736000"
+              data-toaster-id="76241490976345720000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -992,7 +992,7 @@ const str: isDataString<true> = {
 const num: isDataString<false> = {
    data: 9999,
    isString: false,
-};`, `14894515291785736000`)"
+};`, `76241490976345720000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1028,7 +1028,7 @@ const num: isDataString<false> = {
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="68833927280202940000"
+              data-toaster-id="54378588771252920000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1040,7 +1040,7 @@ type T1 = IsStringType<string | number>;
 // T1 타입은 다음과 같은 과정을 거친다.
 1. (string | number) extends string ? 'yes' : 'no'
 2. (string extends string ? 'yes' : 'no') | (number extends string ? 'yes' : 'no')
-3. 'yes' | 'no'`, `68833927280202940000`)"
+3. 'yes' | 'no'`, `54378588771252920000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1062,13 +1062,13 @@ type T1 = IsStringType<string | number>;
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="50894261354573180000"
+              data-toaster-id="79427856360759080000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
               data-toaster-duration="3000"
               onClick="copyToClipboard(`type T3 = string | number extends string ? 'yes' : 'no';
-// 'no'`, `50894261354573180000`)"
+// 'no'`, `79427856360759080000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1084,7 +1084,7 @@ type T1 = IsStringType<string | number>;
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="8228923726325244000"
+              data-toaster-id="98094221739936830000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1095,7 +1095,7 @@ type T3<T> = T[] extends number ? 'yes' : T[]; // 제네릭이지만 T[] 와 같
 
 type T4 = T1; // &quot;yes&quot;
 type T5 = T2<(1 | 3 | 5 | 7)>; // 1[] | 3[] | 5[] | 7[]
-type T6 = T2<(1 | 3 | 5 | 7)>; // (1 | 3 | 5 | 7)[]`, `8228923726325244000`)"
+type T6 = T2<(1 | 3 | 5 | 7)>; // (1 | 3 | 5 | 7)[]`, `98094221739936830000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1115,7 +1115,7 @@ type T6 = T2<(1 | 3 | 5 | 7)>; // (1 | 3 | 5 | 7)[]`, `8228923726325244000`)"
 <p><code class="language-text">never</code> 타입으로 분산이 된 경우 이 타입은 제외된다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="50379766134268690000"
+              data-toaster-id="40934650250738150000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1128,7 +1128,7 @@ type T2 = Never<Types>;
 // T2 타입은 다음과 같은 과정을 거친다.
 1. (number extends number ? T : never) | (string extends number ? T : never) | (object extends number ? T : never)
 2. number | never | never
-3. number`, `50379766134268690000`)"
+3. number`, `40934650250738150000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1150,7 +1150,7 @@ type T2 = Never<Types>;
 <p>조건부 타입의 <code class="language-text">extends</code>에서만 사용 가능한 키워드</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="27253732838517707000"
+              data-toaster-id="44159959389261820000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1159,7 +1159,7 @@ type T2 = Never<Types>;
 // T를 통하여 U를 추론하고 U가 추론 가능한 타입이면 참, 아니면 거짓
 
 type MyType<T> = T extends infer R ? R : null;
-const a : MyType<number> = 123; // number`, `27253732838517707000`)"
+const a : MyType<number> = 123; // number`, `44159959389261820000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1178,7 +1178,7 @@ const a : MyType<number> = 123; // number`, `27253732838517707000`)"
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="19097053532994510000"
+              data-toaster-id="65649832616524620000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1186,7 +1186,7 @@ const a : MyType<number> = 123; // number`, `27253732838517707000`)"
               onClick="copyToClipboard(`type Foo<T> = T extends { a: infer U, b: infer U } ? U : never;
 
 type T10 = Foo<{ a: string, b: string }>;  // string
-type T11 = Foo<{ a: string, b: number }>;  // string | number`, `19097053532994510000`)"
+type T11 = Foo<{ a: string, b: number }>;  // string | number`, `65649832616524620000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1204,7 +1204,7 @@ type T11 = Foo<{ a: string, b: number }>;  // string | number`, `190970535329945
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="38230324768104374000"
+              data-toaster-id="54912948209213440000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1212,7 +1212,7 @@ type T11 = Foo<{ a: string, b: number }>;  // string | number`, `190970535329945
               onClick="copyToClipboard(`type Bar<T> = T extends { a: () => infer U, b: () => infer U } ? U : never;
 
 type T20 = Bar<{ a: () => string, b: () => string }>;  // string
-type T21 = Bar<{ a: () => string, b: () => number }>;  // string | number`, `38230324768104374000`)"
+type T21 = Bar<{ a: () => string, b: () => number }>;  // string | number`, `54912948209213440000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1230,7 +1230,7 @@ type T21 = Bar<{ a: () => string, b: () => number }>;  // string | number`, `382
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="38345565790927430000"
+              data-toaster-id="77825270766421150000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1238,7 +1238,7 @@ type T21 = Bar<{ a: () => string, b: () => number }>;  // string | number`, `382
               onClick="copyToClipboard(`type Bar<T> = T extends { a: (x: infer U) => void, b: (x: infer U) => void } ? U : never;
 
 type T30 = Bar<{ a: (x: string) => void, b: (x: string) => void }>;  // string
-type T31 = Bar<{ a: (x: string) => void, b: (x: number) => void }>;  // string & number`, `38345565790927430000`)"
+type T31 = Bar<{ a: (x: string) => void, b: (x: number) => void }>;  // string & number`, `77825270766421150000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1255,7 +1255,7 @@ type T31 = Bar<{ a: (x: string) => void, b: (x: number) => void }>;  // string &
 <p><code class="language-text">satisfies</code>는 객체의 타입이 더 정확하고 좁은 범위로 추론되도록 하는 키워드이다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="99234950448972600000"
+              data-toaster-id="55731234187997995000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1266,7 +1266,7 @@ type T31 = Bar<{ a: (x: string) => void, b: (x: number) => void }>;  // string &
     blue: [0, 0, 255],
 };
 
-const greenNormalized = palette.green.toUpperCase(); // property toUpperCase does not exist on type [number, number, number]`, `99234950448972600000`)"
+const greenNormalized = palette.green.toUpperCase(); // property toUpperCase does not exist on type [number, number, number]`, `55731234187997995000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1285,7 +1285,7 @@ const greenNormalized = palette.green.toUpperCase(); // property toUpperCase doe
 <p>위 처럼 <code class="language-text">green</code>의 value는 <code class="language-text">string</code> | <code class="language-text">[number, number, number]</code> 이므로 string 메소드인 <code class="language-text">toUpperCase</code> 메소드를 사용하려면 컴파일 에러가 발생한다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="39827823351784460000"
+              data-toaster-id="96944698026730520000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1301,7 +1301,7 @@ const palette: {
     red: [number, number, number];
     green: string;
     blue: [number, number, number];
-}`, `39827823351784460000`)"
+}`, `96944698026730520000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1328,4 +1328,4 @@ const palette: {
           >
             window.___chunkMapping="{\"app\":[\"/app-a8728ba72676c1dec691.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-14bd4f4431ad30d56238.js\"],\"component---src-pages-diary-tsx\":[\"/component---src-pages-diary-tsx-df3142cc650bee2922b0.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-aaea05c8e152373fc127.js\"],\"component---src-pages-lecture-tsx\":[\"/component---src-pages-lecture-tsx-3ddebbd62fe9ece05b20.js\"],\"component---src-pages-search-tsx\":[\"/component---src-pages-search-tsx-170464987e8d34665bc1.js\"],\"component---src-templates-diary-template-tsx\":[\"/component---src-templates-diary-template-tsx-3ec43a86e12f71998f34.js\"],\"component---src-templates-lecture-list-tsx\":[\"/component---src-templates-lecture-list-tsx-12e4fbbd1d7dc52a6b04.js\"],\"component---src-templates-lecture-template-tsx\":[\"/component---src-templates-lecture-template-tsx-0fd5c01c5ff4cfda7fbd.js\"],\"component---src-templates-post-template-tsx\":[\"/component---src-templates-post-template-tsx-e275a5b50eef27380193.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="9d00e451f398a9e110e6";</script><script src="/webpack-runtime-659a761e21db3f511de4.js" async></script><script src="/framework-4dc9f8e3e214a6405f42.js" async></script><script src="/app-a8728ba72676c1dec691.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="462c9b56455cd17619bc";</script><script src="/webpack-runtime-1f3ef53021fefc997edf.js" async></script><script src="/framework-4dc9f8e3e214a6405f42.js" async></script><script src="/app-a8728ba72676c1dec691.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

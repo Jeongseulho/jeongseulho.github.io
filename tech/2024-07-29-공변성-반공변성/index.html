@@ -818,7 +818,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <h2 id="2-공변성" style="position:relative;"><a href="#2-%EA%B3%B5%EB%B3%80%EC%84%B1" aria-label="2 공변성 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 공변성</h2>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="42124781370478720000"
+              data-toaster-id="49008992092076920000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -837,7 +837,7 @@ type T2 = IsSubtypeOf<Array<string | number>, Array<string>>; // false
 // { a: string; b: number }은 { a: string | number; b: number }의 서브타입이다.
 type T3= IsSubtypeOf<{ a: string; b: number }, { a: string | number; b: number }>; // true
 // { a: string | number; b: number }은 { a: string; b: number }의 서브타입이 아니다.
-type T4 = IsSubtypeOf<{ a: string | number; b: number }, { a: string; b: number }>; // false`, `42124781370478720000`)"
+type T4 = IsSubtypeOf<{ a: string | number; b: number }, { a: string; b: number }>; // false`, `49008992092076920000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -865,7 +865,7 @@ type T4 = IsSubtypeOf<{ a: string | number; b: number }, { a: string; b: number 
 <p>함수의 파라미터에서는 반공변성을 따른다, 아래 예에서 <code class="language-text">(x: string | number) => number</code>는 <code class="language-text">(x: string) => number</code>의 서브타입이다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="33811956173515600000"
+              data-toaster-id="50093901896472160000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -876,7 +876,7 @@ type T4 = IsSubtypeOf<{ a: string | number; b: number }, { a: string; b: number 
 
 type B = (x: string | number) => number;
 
-let b: B = a; // ERROR - string | number' 형식은 'string' 형식에 할당할 수 없습니다,  'number' 형식은 'string' 형식에 할당할 수 없습니다.`, `33811956173515600000`)"
+let b: B = a; // ERROR - string | number' 형식은 'string' 형식에 할당할 수 없습니다,  'number' 형식은 'string' 형식에 할당할 수 없습니다.`, `50093901896472160000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -894,7 +894,7 @@ let b: B = a; // ERROR - string | number' 형식은 'string' 형식에 할당할
 <span class="token keyword">let</span> b<span class="token operator">:</span> <span class="token constant">B</span> <span class="token operator">=</span> a<span class="token punctuation">;</span> <span class="token comment">// ERROR - string | number' 형식은 'string' 형식에 할당할 수 없습니다,  'number' 형식은 'string' 형식에 할당할 수 없습니다.</span></code></pre></div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="2208080561636660500"
+              data-toaster-id="93701697265195190000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -905,7 +905,7 @@ let b: B = a; // ERROR - string | number' 형식은 'string' 형식에 할당할
 
 type B = (x: string) => number;
 
-let b: B = a;`, `2208080561636660500`)"
+let b: B = a;`, `93701697265195190000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -927,7 +927,7 @@ let b: B = a;`, `2208080561636660500`)"
 <h3 id="41-일반-변수-할당과-리턴-타입에-대한-공변성" style="position:relative;"><a href="#41-%EC%9D%BC%EB%B0%98-%EB%B3%80%EC%88%98-%ED%95%A0%EB%8B%B9%EA%B3%BC-%EB%A6%AC%ED%84%B4-%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B3%B5%EB%B3%80%EC%84%B1" aria-label="41 일반 변수 할당과 리턴 타입에 대한 공변성 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.1 일반 변수 할당과 리턴 타입에 대한 공변성</h3>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="61572418293535640000"
+              data-toaster-id="97031433495317820000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -936,7 +936,7 @@ let b: B = a;`, `2208080561636660500`)"
 const fn2: FN2 = (x: string) => 'string';
 
 type SN = string | number;
-let sn: SN = 'string';`, `61572418293535640000`)"
+let sn: SN = 'string';`, `97031433495317820000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -954,13 +954,13 @@ let sn: SN = 'string';`, `61572418293535640000`)"
 <h3 id="42-함수-파라미터-타입에-대한-반공변성" style="position:relative;"><a href="#42-%ED%95%A8%EC%88%98-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0-%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%9C-%EB%B0%98%EA%B3%B5%EB%B3%80%EC%84%B1" aria-label="42 함수 파라미터 타입에 대한 반공변성 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.2 함수 파라미터 타입에 대한 반공변성</h3>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="49403725866882556000"
+              data-toaster-id="81369778876371480000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
               data-toaster-duration="3000"
               onClick="copyToClipboard(`type FN1 = (x: string | number) => null;
-const fn1: FN1 = (x: string) => null; // ERROR `, `49403725866882556000`)"
+const fn1: FN1 = (x: string) => null; // ERROR `, `81369778876371480000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -979,4 +979,4 @@ const fn1: FN1 = (x: string) => null; // ERROR `, `49403725866882556000`)"
           >
             window.___chunkMapping="{\"app\":[\"/app-a8728ba72676c1dec691.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-14bd4f4431ad30d56238.js\"],\"component---src-pages-diary-tsx\":[\"/component---src-pages-diary-tsx-df3142cc650bee2922b0.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-aaea05c8e152373fc127.js\"],\"component---src-pages-lecture-tsx\":[\"/component---src-pages-lecture-tsx-3ddebbd62fe9ece05b20.js\"],\"component---src-pages-search-tsx\":[\"/component---src-pages-search-tsx-170464987e8d34665bc1.js\"],\"component---src-templates-diary-template-tsx\":[\"/component---src-templates-diary-template-tsx-3ec43a86e12f71998f34.js\"],\"component---src-templates-lecture-list-tsx\":[\"/component---src-templates-lecture-list-tsx-12e4fbbd1d7dc52a6b04.js\"],\"component---src-templates-lecture-template-tsx\":[\"/component---src-templates-lecture-template-tsx-0fd5c01c5ff4cfda7fbd.js\"],\"component---src-templates-post-template-tsx\":[\"/component---src-templates-post-template-tsx-e275a5b50eef27380193.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="9d00e451f398a9e110e6";</script><script src="/webpack-runtime-659a761e21db3f511de4.js" async></script><script src="/framework-4dc9f8e3e214a6405f42.js" async></script><script src="/app-a8728ba72676c1dec691.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="462c9b56455cd17619bc";</script><script src="/webpack-runtime-1f3ef53021fefc997edf.js" async></script><script src="/framework-4dc9f8e3e214a6405f42.js" async></script><script src="/app-a8728ba72676c1dec691.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
