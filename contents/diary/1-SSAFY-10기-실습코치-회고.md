@@ -2,7 +2,7 @@
 date: 2024-06-01
 index: 01
 title: SSAFY 10기 실습코치 회고
-summary: 삼성 소프트웨어 아카데미 10기의 실습코치로 활동하며 느낀 점을 정리한 글입니다.
+summary: SSAFY 10기의 실습코치로 활동하며 느낀 점
 update: true
 ---
 
