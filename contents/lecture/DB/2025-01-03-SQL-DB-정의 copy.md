@@ -1,7 +1,7 @@
 ---
 title: SQL DB 정의
 categories: [DB]
-date: 2025-01-18 18:00:00 +0900
+date: 2025-01-03 01:00:00 +0900
 tags: [CS]
 ---
 
