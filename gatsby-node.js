@@ -216,29 +216,40 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
       const lecturePosts = result.data.allMarkdownRemark.edges;
 
-      const generateLecturePage = (
-        {
-          node: {
-            fields: { slug },
-          },
-        },
-        index,
-      ) => {
+      // 각 포스트별로 페이지 생성
+      lecturePosts.forEach((post, index) => {
+        const currentCategory = post.node.frontmatter.categories[0];
+
+        // 같은 카테고리의 포스트들만 필터링
+        const sameCategoryPosts = lecturePosts.filter(
+          p => p.node.frontmatter.categories[0] === currentCategory,
+        );
+
+        // 현재 포스트의 같은 카테고리 내에서의 인덱스 찾기
+        const categoryIndex = sameCategoryPosts.findIndex(
+          p => p.node.fields.slug === post.node.fields.slug,
+        );
+
+        // 같은 카테고리 내에서 이전/다음 포스트 찾기
         const previous =
-          index === lecturePosts.length - 1
+          categoryIndex === sameCategoryPosts.length - 1
             ? null
-            : lecturePosts[index + 1].node;
-        const next = index === 0 ? null : lecturePosts[index - 1].node;
-        const pageOptions = {
-          path: slug,
+            : sameCategoryPosts[categoryIndex + 1].node;
+        const next =
+          categoryIndex === 0
+            ? null
+            : sameCategoryPosts[categoryIndex - 1].node;
+
+        createPage({
+          path: post.node.fields.slug,
           component: LectureTemplateComponent,
-          context: { slug, previous, next },
-        };
-
-        createPage(pageOptions);
-      };
-
-      lecturePosts.forEach(generateLecturePage);
+          context: {
+            slug: post.node.fields.slug,
+            previous,
+            next,
+          },
+        });
+      });
     })
     .catch(error => {
       reporter.panicOnBuild(`Error while running create lecture page query`);
