@@ -818,7 +818,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <h2 id="2-공변성" style="position:relative;"><a href="#2-%EA%B3%B5%EB%B3%80%EC%84%B1" aria-label="2 공변성 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 공변성</h2>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="20556375706020114000"
+              data-toaster-id="69350708335902245000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -837,7 +837,7 @@ type T2 = IsSubtypeOf<Array<string | number>, Array<string>>; // false
 // { a: string; b: number }은 { a: string | number; b: number }의 서브타입이다.
 type T3= IsSubtypeOf<{ a: string; b: number }, { a: string | number; b: number }>; // true
 // { a: string | number; b: number }은 { a: string; b: number }의 서브타입이 아니다.
-type T4 = IsSubtypeOf<{ a: string | number; b: number }, { a: string; b: number }>; // false`, `20556375706020114000`)"
+type T4 = IsSubtypeOf<{ a: string | number; b: number }, { a: string; b: number }>; // false`, `69350708335902245000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -865,7 +865,7 @@ type T4 = IsSubtypeOf<{ a: string | number; b: number }, { a: string; b: number 
 <p>함수의 파라미터에서는 반공변성을 따른다, 아래 예에서 <code class="language-text">(x: string | number) => number</code>는 <code class="language-text">(x: string) => number</code>의 서브타입이다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="545566342647685300"
+              data-toaster-id="93983305615491550000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -876,7 +876,7 @@ type T4 = IsSubtypeOf<{ a: string | number; b: number }, { a: string; b: number 
 
 type B = (x: string | number) => number;
 
-let b: B = a; // ERROR - string | number' 형식은 'string' 형식에 할당할 수 없습니다,  'number' 형식은 'string' 형식에 할당할 수 없습니다.`, `545566342647685300`)"
+let b: B = a; // ERROR - string | number' 형식은 'string' 형식에 할당할 수 없습니다,  'number' 형식은 'string' 형식에 할당할 수 없습니다.`, `93983305615491550000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -894,7 +894,7 @@ let b: B = a; // ERROR - string | number' 형식은 'string' 형식에 할당할
 <span class="token keyword">let</span> b<span class="token operator">:</span> <span class="token constant">B</span> <span class="token operator">=</span> a<span class="token punctuation">;</span> <span class="token comment">// ERROR - string | number' 형식은 'string' 형식에 할당할 수 없습니다,  'number' 형식은 'string' 형식에 할당할 수 없습니다.</span></code></pre></div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="33780341013342773000"
+              data-toaster-id="83090503032026370000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -905,7 +905,7 @@ let b: B = a; // ERROR - string | number' 형식은 'string' 형식에 할당할
 
 type B = (x: string) => number;
 
-let b: B = a;`, `33780341013342773000`)"
+let b: B = a;`, `83090503032026370000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -927,7 +927,7 @@ let b: B = a;`, `33780341013342773000`)"
 <h3 id="41-일반-변수-할당과-리턴-타입에-대한-공변성" style="position:relative;"><a href="#41-%EC%9D%BC%EB%B0%98-%EB%B3%80%EC%88%98-%ED%95%A0%EB%8B%B9%EA%B3%BC-%EB%A6%AC%ED%84%B4-%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B3%B5%EB%B3%80%EC%84%B1" aria-label="41 일반 변수 할당과 리턴 타입에 대한 공변성 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.1 일반 변수 할당과 리턴 타입에 대한 공변성</h3>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="80457849563244630000"
+              data-toaster-id="82719194512922050000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -936,7 +936,7 @@ let b: B = a;`, `33780341013342773000`)"
 const fn2: FN2 = (x: string) => 'string';
 
 type SN = string | number;
-let sn: SN = 'string';`, `80457849563244630000`)"
+let sn: SN = 'string';`, `82719194512922050000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -954,13 +954,13 @@ let sn: SN = 'string';`, `80457849563244630000`)"
 <h3 id="42-함수-파라미터-타입에-대한-반공변성" style="position:relative;"><a href="#42-%ED%95%A8%EC%88%98-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0-%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%9C-%EB%B0%98%EA%B3%B5%EB%B3%80%EC%84%B1" aria-label="42 함수 파라미터 타입에 대한 반공변성 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.2 함수 파라미터 타입에 대한 반공변성</h3>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="86279276356278370000"
+              data-toaster-id="82507560602389330000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
               data-toaster-duration="3000"
               onClick="copyToClipboard(`type FN1 = (x: string | number) => null;
-const fn1: FN1 = (x: string) => null; // ERROR `, `86279276356278370000`)"
+const fn1: FN1 = (x: string) => null; // ERROR `, `82507560602389330000`)"
             >
               <div
                 class="gatsby-code-button"

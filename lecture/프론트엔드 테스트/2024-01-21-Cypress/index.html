@@ -817,13 +817,13 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <p>로컬에서 테스트할 경우 웹 앱을 먼저 실행하고 테스트를 진행해야 한다, 이때 <code class="language-text">start-server-and-test</code>를 사용하면 테스트 전에 서버를 실행하고 테스트를 진행이 보장된다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="14298641737333973000"
+              data-toaster-id="37068966510271560000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
               data-toaster-duration="3000"
               onClick="copyToClipboard(`npm i -D cypress
-npm i start-server-and-test`, `14298641737333973000`)"
+npm i start-server-and-test`, `37068966510271560000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -859,7 +859,7 @@ npm i start-server-and-test`, `14298641737333973000`)"
 <h3 id="1-cypress-설정-파일" style="position:relative;"><a href="#1-cypress-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC" aria-label="1 cypress 설정 파일 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>(1) cypress 설정 파일</h3>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="67523832997886530000"
+              data-toaster-id="65627141534647770000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -880,7 +880,7 @@ export default defineConfig({
   env: {
     baseUrl,
   },
-});`, `67523832997886530000`)"
+});`, `65627141534647770000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -918,7 +918,7 @@ export default defineConfig({
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="22178002470262624000"
+              data-toaster-id="16060684620082967000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -966,7 +966,7 @@ it('성공적으로 로그인 되었을 경우 메인 홈 페이지로 이동하
   cy.url().should('eq', \`\${Cypress.env('baseUrl')}/\`);
   cy.findByText('Maria').should('exist');
   cy.findByTestId('cart-icon').should('exist');
-});`, `22178002470262624000`)"
+});`, `16060684620082967000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1022,7 +1022,7 @@ it('성공적으로 로그인 되었을 경우 메인 홈 페이지로 이동하
 <h3 id="3-반복-쿼리-리팩토링" style="position:relative;"><a href="#3-%EB%B0%98%EB%B3%B5-%EC%BF%BC%EB%A6%AC-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81" aria-label="3 반복 쿼리 리팩토링 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>(3) 반복 쿼리 리팩토링</h3>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="22794660099321650000"
+              data-toaster-id="62512446990246090000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1037,7 +1037,7 @@ it('이메일을 입력하지 않고 로그인 버튼을 클릭할 경우 &quot;
   // get을 통해 가져온 쿼리를 사용
   cy.get('@loginBtn').click();
   cy.findByText('이메일을 입력하세요').should('exist');
-});`, `22794660099321650000`)"
+});`, `62512446990246090000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1072,7 +1072,7 @@ it('이메일을 입력하지 않고 로그인 버튼을 클릭할 경우 &quot;
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="88886021127189510000"
+              data-toaster-id="75883761576328220000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1085,7 +1085,7 @@ it('이메일을 입력하지 않고 로그인 버튼을 클릭할 경우 &quot;
     // JQuery 객체를 subject 객체로 사용하려면 wrap을 사용해야 한다.
     cy.wrap(\$email).click();
   })
-  .click();`, `88886021127189510000`)"
+  .click();`, `75883761576328220000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1107,13 +1107,13 @@ it('이메일을 입력하지 않고 로그인 버튼을 클릭할 경우 &quot;
 <p>E2E 테스트 시에 API 응답을 기다리는 중이나 렌더링 중 등의 상황을 고려 하여 특정 시간동안 재시도를 하며 기본적으로 4초이다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="79361153533078550000"
+              data-toaster-id="65304085863789590000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
               data-toaster-duration="3000"
               onClick="copyToClipboard(`// 만약 렌더링이 오래걸리는 컴포넌트라 판단 되면 재시도를 10초로 늘린다.
-cy.findByLabelText('이메일', { timeout: 10000 });`, `79361153533078550000`)"
+cy.findByLabelText('이메일', { timeout: 10000 });`, `65304085863789590000`)"
             >
               <div
                 class="gatsby-code-button"
