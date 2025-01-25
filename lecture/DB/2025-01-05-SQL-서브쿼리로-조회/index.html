@@ -817,7 +817,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="68913678687545760000"
+              data-toaster-id="3381864378542243300"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -828,7 +828,7 @@ WHERE birth_date < (
     SELECT birth_date
     FROM employee
     WHERE id = 14
-);`, `68913678687545760000`)"
+);`, `3381864378542243300`)"
             >
               <div
                 class="gatsby-code-button"
@@ -854,7 +854,7 @@ WHERE birth_date < (
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="47475975559994876000"
+              data-toaster-id="29454998585802494000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -865,7 +865,7 @@ WHERE (dept_id, sex) = (
     SELECT dept_id, sex
     FROM employee
     WHERE id = 1
-);`, `47475975559994876000`)"
+);`, `29454998585802494000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -887,7 +887,7 @@ WHERE (dept_id, sex) = (
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="3690478231951832600"
+              data-toaster-id="62592087870062740000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -899,7 +899,7 @@ AND proj_id IN ( -- id가 5인 직원이 참여한 프로젝트 id들
     SELECT proj_id
     FROM works_on
     WHERE empl_id = 5
-);`, `3690478231951832600`)"
+);`, `62592087870062740000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -930,7 +930,7 @@ AND proj_id IN ( -- id가 5인 직원이 참여한 프로젝트 id들
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="16864912018334420000"
+              data-toaster-id="19965205727187140000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -946,7 +946,7 @@ WHERE id IN (
         FROM works_on
         WHERE empl_id = 5
     )
-);`, `16864912018334420000`)"
+);`, `19965205727187140000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -974,7 +974,7 @@ WHERE id IN (
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="40483525674307396000"
+              data-toaster-id="96867208408833340000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -990,7 +990,7 @@ FROM employee, (
     WHERE empl_id = 5
   )
 ) AS temp_table -- 서브쿼리로 같은 프로젝트 참여한 직원들의 id를 조회, 임시 테이블로 사용
-WHERE id = temp_table.empl_id; -- 임시 테이블 결과에 있는 직원들의 id로 employee 테이블에서 id, name 조회`, `40483525674307396000`)"
+WHERE id = temp_table.empl_id; -- 임시 테이블 결과에 있는 직원들의 id로 employee 테이블에서 id, name 조회`, `96867208408833340000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1017,7 +1017,7 @@ WHERE id = temp_table.empl_id; -- 임시 테이블 결과에 있는 직원들의
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="18037335697416258000"
+              data-toaster-id="82610763218901500000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1029,7 +1029,7 @@ WHERE EXISTS (
     FROM works_on W
     WHERE W.empl_id IN (7, 12)
     AND W.proj_id = P.id
-);`, `18037335697416258000`)"
+);`, `82610763218901500000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1066,7 +1066,7 @@ WHERE EXISTS (
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="39215388052193730000"
+              data-toaster-id="54583509975581835000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1078,7 +1078,7 @@ WHERE NOT EXISTS (
     FROM employee E
     WHERE E.dept_id = D.id
     AND E.birth_date >= '2000-01-01'
-);`, `39215388052193730000`)"
+);`, `54583509975581835000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1105,7 +1105,7 @@ WHERE NOT EXISTS (
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="99339183607305010000"
+              data-toaster-id="28607202413737600000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1116,7 +1116,7 @@ WHERE D.leader_id = E.id AND E.salary < ANY (
     SELECT salary
     FROM employee
     WHERE id != D.leader_id AND dept_id = E.dept_id
-);`, `99339183607305010000`)"
+);`, `28607202413737600000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1141,7 +1141,7 @@ WHERE D.leader_id = E.id AND E.salary < ANY (
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="41201674348030770000"
+              data-toaster-id="48189410281126290000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1156,7 +1156,7 @@ WHERE D.leader_id = E.id AND E.salary < ANY (
     SELECT salary
     FROM employee
     WHERE id != D.leader_id AND dept_id = E.dept_id
-);`, `41201674348030770000`)"
+);`, `48189410281126290000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1182,7 +1182,7 @@ WHERE D.leader_id = E.id AND E.salary < ANY (
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="74607862987665880000"
+              data-toaster-id="47526029301636830000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1193,7 +1193,7 @@ WHERE E.id = W.empl_id AND W.proj_id != ALL (
     SELECT proj_id
     FROM works_on
     WHERE empl_id = 13
-);`, `74607862987665880000`)"
+);`, `47526029301636830000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1215,6 +1215,6 @@ WHERE E.id = W.empl_id AND W.proj_id != ALL (
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-a8728ba72676c1dec691.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-14bd4f4431ad30d56238.js\"],\"component---src-pages-diary-tsx\":[\"/component---src-pages-diary-tsx-df3142cc650bee2922b0.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-aaea05c8e152373fc127.js\"],\"component---src-pages-lecture-tsx\":[\"/component---src-pages-lecture-tsx-3ddebbd62fe9ece05b20.js\"],\"component---src-pages-search-tsx\":[\"/component---src-pages-search-tsx-170464987e8d34665bc1.js\"],\"component---src-templates-diary-template-tsx\":[\"/component---src-templates-diary-template-tsx-3ec43a86e12f71998f34.js\"],\"component---src-templates-lecture-list-tsx\":[\"/component---src-templates-lecture-list-tsx-12e4fbbd1d7dc52a6b04.js\"],\"component---src-templates-lecture-template-tsx\":[\"/component---src-templates-lecture-template-tsx-0fd5c01c5ff4cfda7fbd.js\"],\"component---src-templates-post-template-tsx\":[\"/component---src-templates-post-template-tsx-e275a5b50eef27380193.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-a8728ba72676c1dec691.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-14bd4f4431ad30d56238.js\"],\"component---src-pages-diary-tsx\":[\"/component---src-pages-diary-tsx-df3142cc650bee2922b0.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-aaea05c8e152373fc127.js\"],\"component---src-pages-lecture-tsx\":[\"/component---src-pages-lecture-tsx-b089d9ebd73b3cbed4f9.js\"],\"component---src-pages-search-tsx\":[\"/component---src-pages-search-tsx-170464987e8d34665bc1.js\"],\"component---src-templates-diary-template-tsx\":[\"/component---src-templates-diary-template-tsx-3ec43a86e12f71998f34.js\"],\"component---src-templates-lecture-list-tsx\":[\"/component---src-templates-lecture-list-tsx-7c963152367a2c1e8a1e.js\"],\"component---src-templates-lecture-template-tsx\":[\"/component---src-templates-lecture-template-tsx-0fd5c01c5ff4cfda7fbd.js\"],\"component---src-templates-post-template-tsx\":[\"/component---src-templates-post-template-tsx-e275a5b50eef27380193.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="9e74ef4641013a3fb827";</script><script src="/webpack-runtime-1f3ef53021fefc997edf.js" async></script><script src="/framework-4dc9f8e3e214a6405f42.js" async></script><script src="/app-a8728ba72676c1dec691.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="0c5e65b79ffa82b3b53d";</script><script src="/webpack-runtime-4bdbf9f4f5c0a20cd164.js" async></script><script src="/framework-4dc9f8e3e214a6405f42.js" async></script><script src="/app-a8728ba72676c1dec691.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
