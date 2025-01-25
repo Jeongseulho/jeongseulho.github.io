@@ -77,7 +77,7 @@ const LectureCard = ({ category }: LectureCardProps) => {
   const thumbnail = category.nodes[0]?.frontmatter.thumbnail;
 
   return (
-    <CategoryCard to={`/lecture/${category.fieldValue.toLowerCase()}`}>
+    <CategoryCard to={`/lecture/${category.fieldValue}`}>
       <ThumbnailWrapper>
         {thumbnail && (
           <Thumbnail

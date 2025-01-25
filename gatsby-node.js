@@ -258,7 +258,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   result.data.allMarkdownRemark.group.forEach(({ fieldValue }) => {
     createPage({
-      path: `/lecture/${fieldValue.toLowerCase()}`,
+      path: `/lecture/${fieldValue}`,
       component: path.resolve('./src/templates/lecture-list.tsx'),
       context: {
         category: fieldValue,

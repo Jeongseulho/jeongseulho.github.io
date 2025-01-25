@@ -123,9 +123,7 @@ const LectureListTemplate = ({
       meta={{
         title: `${category} 강의`,
         description: `${category} 관련 강의 포스트 목록`,
-        url: `${
-          data.site.siteMetadata.siteUrl
-        }/lecture/${category.toLowerCase()}`,
+        url: `${data.site.siteMetadata.siteUrl}/lecture/${category}`,
       }}
     >
       <LectureListWrapper>
