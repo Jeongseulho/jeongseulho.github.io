@@ -10,8 +10,7 @@ tags: [CS]
 
 ```sql
 delimiter $$ -- semicolon 대신 $$을 sql 문의 끝으로 인식하도록 함
-```
-```sql
+
 CREATE FUNCTION 함수이름(매개변수)
 RETURNS 반환타입
 NO SQL -- MYSQL에서 사용하는 함수 정의 키워드
@@ -19,8 +18,7 @@ BEGIN
     -- 함수 본문
 END
 $$
-```
-```sql
+
 delimiter ; -- 기본값으로 복원
 ```
 
@@ -38,10 +36,6 @@ BEGIN
     RETURN @avg_salary; -- 변수 리턴
 END
 $$
-```
-
-```sql
-SELECT dept_avg_salary(1);
 ```
 
 ## 함수 사용 예시
