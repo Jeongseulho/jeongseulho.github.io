@@ -819,7 +819,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 </blockquote>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="36116069325168710000"
+              data-toaster-id="45707546158911660000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -834,7 +834,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 
 for(int i = 0; i < 10; i++) {
     counter.increment(); // 각 루프문의 다른 스레드에서 실행된다면?
-}`, `36116069325168710000`)"
+}`, `45707546158911660000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -864,7 +864,7 @@ for(int i = 0; i < 10; i++) {
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="60678181246922810000"
+              data-toaster-id="69993207572623350000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -872,7 +872,7 @@ for(int i = 0; i < 10; i++) {
               onClick="copyToClipboard(`   // 이 메소드를 임계영역으로 설정하여 해결
    public void increment() {
         count++;
-    }`, `60678181246922810000`)"
+    }`, `69993207572623350000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -888,7 +888,7 @@ for(int i = 0; i < 10; i++) {
 <h2 id="임계-영역-동작-과정" style="position:relative;"><a href="#%EC%9E%84%EA%B3%84-%EC%98%81%EC%97%AD-%EB%8F%99%EC%9E%91-%EA%B3%BC%EC%A0%95" aria-label="임계 영역 동작 과정 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>임계 영역 동작 과정</h2>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="96286394510599860000"
+              data-toaster-id="27745729739268723000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -898,7 +898,7 @@ for(int i = 0; i < 10; i++) {
     critical section // 임계영역 실행
     exit section // 나가기
     remainder section // 나머지 코드
-} while(true);`, `96286394510599860000`)"
+} while(true);`, `27745729739268723000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -931,7 +931,7 @@ for(int i = 0; i < 10; i++) {
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="61787032476562320000"
+              data-toaster-id="21213945858370020000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -950,7 +950,7 @@ void criticalSection() {
     while(testAndSet(&lock) == 1); // 임계영역 진입 전 임계영역이 사용중인지 확인
     ...critical section... // 임계영역 실행
     lock = 0; // 임계영역 종료
-}`, `61787032476562320000`)"
+}`, `21213945858370020000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -989,7 +989,7 @@ void criticalSection() {
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="12428778014800468000"
+              data-toaster-id="27127304125254350000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1020,7 +1020,7 @@ void unlock() {
 // 사용
 lock();
 ...critical section...
-unlock();`, `12428778014800468000`)"
+unlock();`, `27127304125254350000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1075,7 +1075,7 @@ mutex는 끝나면 알려주므로 불필요한 <code class="language-text">Cont
 </ul>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="69755020152487340000"
+              data-toaster-id="96960241116726870000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1114,7 +1114,7 @@ signal();
 signal(); // thread1 종료
 
 wait(); // thread2 대기
-...thread2 work... // thread2 실행`, `69755020152487340000`)"
+...thread2 work... // thread2 실행`, `96960241116726870000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1190,4 +1190,4 @@ HPP가 LPP가 임계영역을 빠져나올 때까지 대기 => HPP가 LPP의 의
           >
             window.___chunkMapping="{\"app\":[\"/app-a8728ba72676c1dec691.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-14bd4f4431ad30d56238.js\"],\"component---src-pages-diary-tsx\":[\"/component---src-pages-diary-tsx-df3142cc650bee2922b0.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-aaea05c8e152373fc127.js\"],\"component---src-pages-lecture-tsx\":[\"/component---src-pages-lecture-tsx-b089d9ebd73b3cbed4f9.js\"],\"component---src-pages-search-tsx\":[\"/component---src-pages-search-tsx-170464987e8d34665bc1.js\"],\"component---src-templates-diary-template-tsx\":[\"/component---src-templates-diary-template-tsx-3ec43a86e12f71998f34.js\"],\"component---src-templates-lecture-list-tsx\":[\"/component---src-templates-lecture-list-tsx-7c963152367a2c1e8a1e.js\"],\"component---src-templates-lecture-template-tsx\":[\"/component---src-templates-lecture-template-tsx-0fd5c01c5ff4cfda7fbd.js\"],\"component---src-templates-post-template-tsx\":[\"/component---src-templates-post-template-tsx-e275a5b50eef27380193.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="ef104e32152e171bdf7d";</script><script src="/webpack-runtime-4bdbf9f4f5c0a20cd164.js" async></script><script src="/framework-4dc9f8e3e214a6405f42.js" async></script><script src="/app-a8728ba72676c1dec691.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="4fe7af4440202c536d74";</script><script src="/webpack-runtime-4bdbf9f4f5c0a20cd164.js" async></script><script src="/framework-4dc9f8e3e214a6405f42.js" async></script><script src="/app-a8728ba72676c1dec691.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
