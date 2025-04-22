@@ -19,8 +19,8 @@ tags: [CS]
 # 스레드에서 blocking IO
 ![Image](https://github.com/user-attachments/assets/22a2b3fa-db98-4249-89f8-9004eaa1157b)
 스레드에서 blocking system call을 호출하면 해당 IO 작업이 완료될 때까지 스레드는 대기  
-커널은 작업이 완료되어야 결과를 리턴턴
-> CPU의 입장에서 IO가 발생하면 waiting 상태로 전환됨  
+커널은 작업이 완료되어야 결과를 리턴
+> 스레드는 IO가 발생하면 waiting 상태로 전환됨  
 > 즉, blocking이 되어도 CPU는 계속 일하고 있지만  
 > IO 작업이 완료되기 전까지 waiting이므로 다른 스레드와의 CPU 사용 경쟁에서 불리함
 
@@ -35,6 +35,7 @@ tags: [CS]
 ![Image](https://github.com/user-attachments/assets/18f4830a-d747-4499-8dd4-7d6bd8e21ae5)
 non-blocking system call을 호출하면 커널은 IO 작업 완료 전 결과를 즉시 리턴  
 스레드는 다른 작업을 계속 진행할 수 있음
+> non-blocking은 IO가 발생하여도 스레드는 waiting 상태로 전환되지 않음
 > 스레드는 커널에 작업이 완료되었는지 주기적으로 확인하거나  
 > 완료되면 커널에게 알림을 받아 결과를 처리하는 2가지 방식 존재
 
