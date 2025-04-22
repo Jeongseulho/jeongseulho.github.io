@@ -35,7 +35,7 @@ tags: [CS]
 ![Image](https://github.com/user-attachments/assets/18f4830a-d747-4499-8dd4-7d6bd8e21ae5)
 non-blocking system call을 호출하면 커널은 IO 작업 완료 전 결과를 즉시 리턴  
 스레드는 다른 작업을 계속 진행할 수 있음
-> non-blocking은 IO가 발생하여도 스레드는 waiting 상태로 전환되지 않음
+> non-blocking은 IO가 발생하여도 스레드는 waiting 상태로 전환되지 않음  
 > 스레드는 커널에 작업이 완료되었는지 주기적으로 확인하거나  
 > 완료되면 커널에게 알림을 받아 결과를 처리하는 2가지 방식 존재
 
