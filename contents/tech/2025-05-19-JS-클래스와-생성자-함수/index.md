@@ -13,6 +13,8 @@ sources_link: [https://roy-jung.github.io/161007_is-class-only-a-syntactic-sugar
 기존의 생성자 함수를 사용한 객체 생성 방식과 비교하며, Class 문법과의 차이점 및 사용 이유에 대해 정리
 
 ## 1. 객체 생성 비교
+
+### 1-1. ES5 생성자 함수
 - 기존의 생성자 함수는 일반 함수와 생성자의 역할을 모두 수행합니다.
 - 이 구분을 위해 생성자 함수는 대문자로 시작하며 개발자가 자체 규칙을 정해야 합니다.
 ```javascript
@@ -25,6 +27,7 @@ const es5General = ES5('ES5') // undefined
 const es5Constructor = ES5.prototype.constructor('ES5') // { name: 'ES5' }
 ```  
 
+### 1-2. ES6 클래스
 - `Class`의 `constructor`는 생성자 함수의 역할만을 수행합니다.
 - `constructor`는 오직 `new` 키워드를 통하여 호출됩니다.
 ```javascript
@@ -148,12 +151,14 @@ Parent.staticMethod() // static method
 
 ## 4. 메소드와 생성자 함수 구분
 
+### 4-1. ES5 메소드
 - `ES5`에서 메소드는 그 자체로 함수이므로, 생성자 함수로 사용할 수 있습니다.
 ```javascript
 var methodObj = new ES5Parent.prototype.method()
 var staticObj = new ES5Parent.staticMethod()
 ```
 
+### 4-2. ES6 메소드
 - `ES6`에서 메소드는 생성자 함수로 사용할 수 없습니다.
 ```javascript
 var methodObj = new ES6Parent.prototype.method() // Uncaught TypeError
