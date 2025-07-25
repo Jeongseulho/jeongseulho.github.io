@@ -829,7 +829,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <blockquote>
 <p>스레드는 IO가 발생하면 waiting 상태로 전환됨<br>
 즉, blocking이 되어도 CPU는 계속 일하고 있지만<br>
-IO 작업이 완료되기 전까지 waiting이므로 다른 스레드와의 CPU 사용 경쟁에서 불리함</p>
+IO 작업이 완료되기 전까지 waiting이므로 다른 스레드와의 CPU 사용 경쟁에 참여하지 못함</p>
 </blockquote>
 <h1 id="소켓에서-blocking-io" style="position:relative;"><a href="#%EC%86%8C%EC%BC%93%EC%97%90%EC%84%9C-blocking-io" aria-label="소켓에서 blocking io permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>소켓에서 blocking IO</h1>
 <ul>
