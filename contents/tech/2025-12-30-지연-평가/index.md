@@ -4,7 +4,7 @@ title: 지연 평가
 tags: [JS, Iterator, Lazy Evaluation]
 summary: 이터레이터를 활용한 지연평가
 thumbnail: ./image.png
-update: false
+update: true
 sources: [FE재남님의 블로그]
 sources_link: [https://roy-jung.github.io/iterator-helper-overview/?utm_source=substack&amp;utm_medium=email]
 ---
