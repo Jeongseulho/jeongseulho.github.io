@@ -819,7 +819,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 <p>JavaScript는 본래 <strong>덕 타이핑(Duck Typing)</strong>​으로 동작하는 언어입니다. 개발자들은 특정 객체가 어떤 클래스의 인스턴스인지 따지기보다, 당장 필요한 속성이 있는지를 확인하고 바로 사용해 왔습니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="6262058186912522000"
+              data-toaster-id="33055872037739010000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -830,7 +830,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 }
 
 const user = { id: &quot;user_01&quot;, name: &quot;Jeong&quot; };
-printId(user); // &quot;user_01&quot;`, `6262058186912522000`)"
+printId(user); // &quot;user_01&quot;`, `33055872037739010000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -852,7 +852,7 @@ printId(user); // &quot;user_01&quot;`, `6262058186912522000`)"
 <p>서로 다른 라이브러리에서 정의한 인터페이스가 구조적으로 동일할 때 구조적 타이핑을 활용하는 사례는 다음과 같습니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="60998686178636530000"
+              data-toaster-id="15912857661356060000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -883,7 +883,7 @@ const realS3Client = new S3Client({ region: &quot;us-east-1&quot; });
 // 2. 구조적 타이핑 덕분에 '정식 AWS 객체'를 '이름도 모르는 유틸리티 함수'에 바로 던질 수 있습니다.
 // uploadConfig는 AWS S3Client가 누군지 모르지만, 
 // 그 안에 .putObject()가 있다는 '구조'만 보고 통과시켜 줍니다.
-uploadConfig(realS3Client, &quot;{ 'theme': 'dark' }&quot;);`, `60998686178636530000`)"
+uploadConfig(realS3Client, &quot;{ 'theme': 'dark' }&quot;);`, `15912857661356060000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -922,8 +922,9 @@ uploadConfig(realS3Client, &quot;{ 'theme': 'dark' }&quot;);`, `6099868617863653
 <p><code class="language-text">s3-simple-uploader</code> 개발자는 사용자가 AWS SDK를 쓸지, MinIO SDK를 쓸지 모릅니다. 만약 명시적 타이핑(Java/C#)이었다면, 이 개발자는 모든 SDK를 지원하기 위해 Adapter를 일일이 만들거나, 사용자가 직접 변환 코드를 짜야합니다.</p>
 <p>수많은 라이브러리가 <strong>업계 표준의 ‘형태(Shape)’</strong>​를 따라갑니다. TypeScript는 이들이 서로를 명시적으로 상속받지 않았더라도, 그 형태만 일치하면 연결해 줍니다. 이것이 수만 개의 패키지가 얽힌 NPM 생태계에서 TS가 독보적인 개발 경험을 제공하는 이유입니다.</p>
 <h3 id="1-3-런타임-오버헤드-0zero의-실현" style="position:relative;"><a href="#1-3-%EB%9F%B0%ED%83%80%EC%9E%84-%EC%98%A4%EB%B2%84%ED%97%A4%EB%93%9C-0zero%EC%9D%98-%EC%8B%A4%ED%98%84" aria-label="1 3 런타임 오버헤드 0zero의 실현 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1-3. 런타임 오버헤드 0(Zero)의 실현</h3>
-<p>TypeScript의 <strong>Design Goal #7</strong>​은 <em>“모든 JavaScript 코드의 런타임 동작을 보존한다(Preserve runtime behavior of all JavaScript code)”</em> 는 것입니다. 이 목표는 <strong>타입 소거</strong>​라는 대전제로 이어집니다.</p>
-<p>명목적 타이핑을 선택했다면, 런타임에 이 객체가 특정 인터페이스의 ‘진짜 주인’인지 확인하기 위한 추가 정보(<strong>RTTI</strong>, Run-Time Type Information)가 객체마다 붙어 있어야 했을 것입니다. 하지만 이는 TypeScript가 순수 JS로 변환될 때 오버헤드가 됩니다</p>
+<p>TypeScript의 <strong>Design Goal #7</strong>​은 <em>“모든 JavaScript 코드의 런타임 동작을 보존한다(Preserve runtime behavior of all JavaScript code)”</em> 는 것입니다. 이 목표는 <strong>타입 소거(Type Erasure)</strong>​라는 대전제로 이어집니다.</p>
+<p>명목적 타이핑을 선택했다면, 런타임에 이 객체가 특정 인터페이스의 ‘진짜 주인’인지 확인하기 위한 추가 정보(<strong>RTTI</strong>, Run-Time Type Information)가 객체마다 붙어 있어야 했을 것입니다.</p>
+<p>TypeScript는 컴파일 단계에서만 구조의 일치 여부를 따지고, 런타임에는 관련 코드를 전혀 남기지 않습니다. 즉, TypeScript를 썼다고 해서 프로그램이 더 느려지거나 메모리를 더 쓰지 않는 <strong>‘제로 오버헤드’</strong>​를 실현한 것입니다.</p>
 <h2 id="2-구조적-타입-시스템의-트레이드오프" style="position:relative;"><a href="#2-%EA%B5%AC%EC%A1%B0%EC%A0%81-%ED%83%80%EC%9E%85-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%98-%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%93%9C%EC%98%A4%ED%94%84" aria-label="2 구조적 타입 시스템의 트레이드오프 permalink" class="anchor-header before"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 구조적 타입 시스템의 트레이드오프</h2>
 <p>하지만 이러한 구조적 타입 시스템의 유연함은 예상치 못한 버그를 유발할 수도 있습니다.<br>
 구조적 타입 시스템의 <strong>느슨함</strong>​으로 인해 발생하는 문제들은 다음과 같습니다.</p>
@@ -932,7 +933,7 @@ uploadConfig(realS3Client, &quot;{ 'theme': 'dark' }&quot;);`, `6099868617863653
 <p>집합론적으로 타입 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.1389em;">T</span></span></span></span></span>가 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.109em;">U</span></span></span></span></span>에 할당 가능하기 위해 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>⊆</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">T \subseteq U</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.1389em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.109em;">U</span></span></span></span></span>의 관계를 만족하면 충분하다는 이 논리는 아래와 같은 문제를 발생시킵니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="23364850506160220000"
+              data-toaster-id="97197777262851010000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -957,7 +958,7 @@ const productPrice: AmountUSD = { value: 10, currency: &quot;USD&quot; };
 
 // 🔴 문제 발생 : 달러가 원화 결제 로직에 유입되었으나, 
 // 구조적으로 &quot;string 리터럴&quot;과 &quot;number&quot;가 일치하므로 TS는 이를 허용합니다.
-processKRWPayment(productPrice); `, `23364850506160220000`)"
+processKRWPayment(productPrice); `, `97197777262851010000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -995,7 +996,7 @@ processKRWPayment(productPrice); `, `23364850506160220000`)"
 <p>컴파일러는 객체 리터럴에 <code class="language-text">FreshLiteral</code>이라는 내부 플래그를 부여해 ‘신선한(Fresh)’ 상태인지 구분하는데, 이를 <strong>신선도(Freshness)</strong>​라고 부릅니다. 이 플래그가 있을 때만 초과 속성을 잡아내며, 객체가 변수에 할당되거나 타입 단언(<code class="language-text">as</code>)이 일어나는 순간 신선함이 사라지면서 검사를 우회하게 됩니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="30880485892336718000"
+              data-toaster-id="72819130589409520000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1014,7 +1015,7 @@ const detailedUser = {
 
 // 🔴 문제 발생: 변수에 할당된 객체는 검사를 우회합니다.
 // TS는 name이 있으니 안전하다고 판단하지만, 실제로는 비밀번호까지 전송됩니다.
-sendToClient(detailedUser); `, `30880485892336718000`)"
+sendToClient(detailedUser); `, `72819130589409520000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1049,7 +1050,7 @@ sendToClient(detailedUser); `, `30880485892336718000`)"
 </blockquote>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="62539492024448440000"
+              data-toaster-id="88587935289601130000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1079,7 +1080,7 @@ registerLogs(clickLogs);
 clickLogs.forEach((log) => {
   // 💥 런타임 에러: &quot;view_event&quot; 로그에는 x, y 값이 없습니다.
   console.log(log.x.toFixed(2)); // TypeError: Cannot read property 'toFixed' of undefined
-});`, `62539492024448440000`)"
+});`, `88587935289601130000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1117,7 +1118,7 @@ clickLogs<span class="token punctuation">.</span><span class="token function">fo
 <p>이런 문제가 발생하는 이유는 TypeScript 내부의 <code class="language-text">Array</code> 인터페이스가 <code class="language-text">push</code>를 <strong>메서드 방식</strong>으로 선언하고 있으며, TypeScript는 이러한 메서드 선언에 대해 <strong>이변성(Bivariant)</strong>​을 유지하기 때문입니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="90674734451178420000"
+              data-toaster-id="50832544011781720000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1125,7 +1126,7 @@ clickLogs<span class="token punctuation">.</span><span class="token function">fo
               onClick="copyToClipboard(`// TypeScript 라이브러리(lib.es5.d.ts) 내 실제 선언
 interface Array<T> {
   push(...items: T[]): number; // <--- '메서드' 선언 방식
-}`, `90674734451178420000`)"
+}`, `50832544011781720000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1143,7 +1144,7 @@ interface Array<T> {
 만약 메서드까지 엄격하게(매개변수를 반공변적으로) 검사했다면, 이미 자바스크립트 생태계에 널리 퍼진 다형성 패턴을 사용할 때마다 매번 타입을 강제로 속이거나 불필요한 코드를 작성해야 했을 것입니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="49937584620469910000"
+              data-toaster-id="149647916852568830"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1159,7 +1160,7 @@ const onClick = (e: MouseEvent) => console.log(e.clientX);
 // 🟢 이변성으로 인하여 문제 없이 사용 가능
 // 🔴 이변성이 없다면(매개변수를 반공변성으로 판단했다면) 에러 발생
 // &quot;EventListener는 모든 Event를 처리해야 하는데, MouseEvent만 처리하는 함수는 못 들어와!&quot;
-window.addEventListener(&quot;click&quot;, onClick); `, `49937584620469910000`)"
+window.addEventListener(&quot;click&quot;, onClick); `, `149647916852568830`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1221,7 +1222,7 @@ TypeScript에서는 이를 보완하기 위한 제약 장치들을 함께 제공
 <p>같은 구조의 다른 의미를 가진 타입들이 서로 섞여서 발생하는 논리적 오류를 방지하기 위해 <strong>브랜디드 타입(Branded Types)</strong> 혹은 <strong>Opaque Types</strong>라 불리는 기법을 활용합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="47712086784915430000"
+              data-toaster-id="17627581180504869000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1261,7 +1262,7 @@ processKRWPayment(wonPrice);
 processKRWPayment(dollarPrice); 
 
 // 🔴 일반 객체 리터럴 유입도 차단
-processKRWPayment({ value: 5000 });`, `47712086784915430000`)"
+processKRWPayment({ value: 5000 });`, `17627581180504869000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1311,7 +1312,7 @@ processKRWPayment({ value: 5000 });`, `47712086784915430000`)"
 <p>TypeScript는 객체 리터럴이 변수에 할당되지 않은 ‘신선한(Fresh)’ 상태일 때, 엄격한 <strong>초과 속성 검사(Excess Property Checks)</strong>​를 수행합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="43421285359931610000"
+              data-toaster-id="13448000661291215000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1327,7 +1328,7 @@ function sendToClient(user: UserProfile) {
 sendToClient({
   name: &quot;Jeong&quot;,
   passwordHash: &quot;secret_1234&quot; // 🔴 오류 발생! 'passwordHash'는 UserProfile에 없습니다.
-});`, `43421285359931610000`)"
+});`, `13448000661291215000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1359,7 +1360,7 @@ sendToClient({
 <p>TypeScript의 <code class="language-text">strictFunctionTypes</code> 옵션이 켜져 있을 때, 두 선언 방식은 호환성 검사에서 다르게 동작합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="39973037845758650000"
+              data-toaster-id="23303546984437064000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1375,7 +1376,7 @@ interface DangerousCollector<T> {
 // ✅ 안전: 함수 속성 선언 방식 (strict 옵션 활성화 시 반공변성 적용)
 interface StrictCollector<T> {
   add: (log: T) => void;
-}`, `39973037845758650000`)"
+}`, `23303546984437064000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1399,7 +1400,7 @@ interface StrictCollector<T> {
 <p><code class="language-text">StrictCollector</code>를 사용하면 런타임 에러를 컴파일 단계에서 차단할 수 있습니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="1618886615478154500"
+              data-toaster-id="60952991517721640000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="📋  코드를 복사했습니다."
@@ -1421,7 +1422,7 @@ const clickCollector: StrictCollector<ClickLog> = {
 
 // 🔴 이제 컴파일 에러가 발생하여 사고를 막습니다! (엄격한 반공변성 검사)
 // &quot;StrictCollector<ClickLog>는 StrictCollector<BaseLog>에 할당할 수 없습니다.&quot;
-registerLogs(clickCollector);`, `1618886615478154500`)"
+registerLogs(clickCollector);`, `60952991517721640000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1465,4 +1466,4 @@ registerLogs(clickCollector);`, `1618886615478154500`)"
           >
             window.___chunkMapping="{\"app\":[\"/app-a8728ba72676c1dec691.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-14bd4f4431ad30d56238.js\"],\"component---src-pages-diary-tsx\":[\"/component---src-pages-diary-tsx-df3142cc650bee2922b0.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-aaea05c8e152373fc127.js\"],\"component---src-pages-lecture-tsx\":[\"/component---src-pages-lecture-tsx-b089d9ebd73b3cbed4f9.js\"],\"component---src-pages-search-tsx\":[\"/component---src-pages-search-tsx-170464987e8d34665bc1.js\"],\"component---src-templates-diary-template-tsx\":[\"/component---src-templates-diary-template-tsx-3ec43a86e12f71998f34.js\"],\"component---src-templates-lecture-list-tsx\":[\"/component---src-templates-lecture-list-tsx-7c963152367a2c1e8a1e.js\"],\"component---src-templates-lecture-template-tsx\":[\"/component---src-templates-lecture-template-tsx-0fd5c01c5ff4cfda7fbd.js\"],\"component---src-templates-post-template-tsx\":[\"/component---src-templates-post-template-tsx-e275a5b50eef27380193.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="80180aeb179b261b3535";</script><script src="/webpack-runtime-b1286462be834abac4a7.js" async></script><script src="/framework-4dc9f8e3e214a6405f42.js" async></script><script src="/app-a8728ba72676c1dec691.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="989e3d1ca07c558263dd";</script><script src="/webpack-runtime-b1286462be834abac4a7.js" async></script><script src="/framework-4dc9f8e3e214a6405f42.js" async></script><script src="/app-a8728ba72676c1dec691.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
