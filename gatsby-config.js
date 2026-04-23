@@ -154,6 +154,12 @@ module.exports = {
             },
           },
           {
+            resolve: 'gatsby-remark-katex',
+            options: {
+              strict: 'ignore', // ignore warnings for missing characters etc.
+            },
+          },
+          {
             resolve: 'gatsby-remark-prismjs',
             options: {
               classPrefix: 'language-',
