@@ -76,9 +76,11 @@ uploadConfig(realS3Client, "{ 'theme': 'dark' }");
 
 ### 1-3. 런타임 오버헤드 0(Zero)의 실현
 
-TypeScript의 **Design Goal #7**&#8203;은 *"모든 JavaScript 코드의 런타임 동작을 보존한다(Preserve runtime behavior of all JavaScript code)"* 는 것입니다. 이 목표는 **타입 소거**&#8203;라는 대전제로 이어집니다.
+TypeScript의 **Design Goal #7**&#8203;은 *"모든 JavaScript 코드의 런타임 동작을 보존한다(Preserve runtime behavior of all JavaScript code)"* 는 것입니다. 이 목표는 **타입 소거(Type Erasure)**&#8203;라는 대전제로 이어집니다.
 
-명목적 타이핑을 선택했다면, 런타임에 이 객체가 특정 인터페이스의 '진짜 주인'인지 확인하기 위한 추가 정보(**RTTI**, Run-Time Type Information)가 객체마다 붙어 있어야 했을 것입니다. 하지만 이는 TypeScript가 순수 JS로 변환될 때 오버헤드가 됩니다
+명목적 타이핑을 선택했다면, 런타임에 이 객체가 특정 인터페이스의 '진짜 주인'인지 확인하기 위한 추가 정보(**RTTI**, Run-Time Type Information)가 객체마다 붙어 있어야 했을 것입니다.  
+
+TypeScript는 컴파일 단계에서만 구조의 일치 여부를 따지고, 런타임에는 관련 코드를 전혀 남기지 않습니다. 즉, TypeScript를 썼다고 해서 프로그램이 더 느려지거나 메모리를 더 쓰지 않는 **'제로 오버헤드'**&#8203;를 실현한 것입니다.
 
 ## 2. 구조적 타입 시스템의 트레이드오프
 
